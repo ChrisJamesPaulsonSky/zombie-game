@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie RTS</title>
+    <link rel="stylesheet" href="style.css">
+    <script>window.__BROTLI_ASSETS__=true;</script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="loading-content">
+            <h1 id="loading-title">ZOMBIE RTS</h1>
+            <div id="loading-bar-track">
+                <div id="loading-bar-fill"></div>
+            </div>
+            <div id="loading-status">Initializing...</div>
+            <div id="build-version">Build: loading…</div>
+            <div id="loading-attribution">
+                Elevation data © Mapzen, via AWS Open Data
+            </div>
+        </div>
+    </div>
+    <div id="game-container">
+        <canvas id="terrain-canvas" width="1920" height="1080"></canvas>
+        <canvas id="game-canvas" width="1920" height="1080"></canvas>
+        <div id="hud-overlay"></div>
+        <canvas id="minimap-canvas" width="200" height="200"></canvas>
+    </div>
+    <script type="module" src="bootstrap.js"></script>
+</body>
+</html>

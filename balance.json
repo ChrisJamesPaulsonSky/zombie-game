@@ -1,0 +1,373 @@
+{
+    "units": {
+        "worker": {
+            "damage": 3.0,
+            "attack_range": 1.0,
+            "attack_cooldown": 1.5,
+            "noise_on_attack": 5.0,
+            "speed": 2.0,
+            "run_speed": 3.0,
+            "sight_range": 3.0,
+            "bullet_speed": null,
+            "turn_speed": 0.04,
+            "max_health": 50.0
+        },
+        "hunter": {
+            "damage": 10.0,
+            "attack_range": 8.0,
+            "attack_cooldown": 1.2,
+            "noise_on_attack": 15.0,
+            "speed": 3.5,
+            "sight_range": 9.0,
+            "bullet_speed": 1.0,
+            "turn_speed": 0.06,
+            "facing_offset": 0,
+            "projectile_offset": [0.15, 0.25],
+            "max_health": 55.0
+        },
+        "militia": {
+            "damage": 24.0,
+            "attack_range": 3.5,
+            "attack_cooldown": 5.0,
+            "noise_on_attack": 30.0,
+            "speed": 3.0,
+            "sight_range": 7.0,
+            "bullet_speed": 2.5,
+            "turn_speed": 0.05,
+            "max_health": 65.0,
+            "attack_fire_delay": 0.4,
+            "shotgun_cone_angle": 30.0,
+            "shotgun_pellets": 5,
+            "shotgun_knockback": 0.4
+        },
+        "soldier": {
+            "damage": 15.0,
+            "attack_range": 5.0,
+            "attack_cooldown": 0.8,
+            "noise_on_attack": 30.0,
+            "speed": 2.5,
+            "sight_range": 7.0,
+            "bullet_speed": 3.0,
+            "turn_speed": 0.05,
+            "max_health": 80.0
+        },
+        "sniper": {
+            "damage": 25.0,
+            "attack_range": 10.0,
+            "attack_cooldown": 2.0,
+            "noise_on_attack": 40.0,
+            "speed": 2.0,
+            "sight_range": 10.0,
+            "bullet_speed": 4.0,
+            "turn_speed": 0.07,
+            "max_health": 45.0
+        },
+        "engineer": {
+            "damage": 5.0,
+            "attack_range": 3.0,
+            "attack_cooldown": 1.0,
+            "noise_on_attack": 10.0,
+            "speed": 2.0,
+            "sight_range": 6.0,
+            "bullet_speed": 2.0,
+            "turn_speed": 0.05,
+            "max_health": 50.0
+        }
+    },
+    "leveling": {
+        "xp_thresholds": [50.0, 150.0],
+        "damage_multipliers": [1.0, 1.1, 1.2],
+        "health_bonus_fractions": [0.0, 0.15, 0.30]
+    },
+    "xp_awards": {
+        "walker": 5.0,
+        "runner": 8.0,
+        "screamer": 10.0,
+        "bloated": 20.0,
+        "brute": 50.0,
+        "mutant": 70.0
+    },
+    "zombies": {
+        "walker":   { "detection_range": 8.0,  "attack_range": 0.5, "damage": 5.0,  "speed": 0.5, "run_speed": 3.5, "attack_cooldown": 1.5, "hp": 30.0 },
+        "screamer": { "detection_range": 15.0, "attack_range": 1.0, "damage": 10.0,  "speed": 1.5, "run_speed": 3.5, "attack_cooldown": 3.0, "hp": 60.0 },
+        "runner":   { "detection_range": 15.0, "attack_range": 1.2, "damage": 15.0,  "speed": 3.5, "run_speed": 3.5, "attack_cooldown": 1.0, "hp": 90.0 },
+        "bloated":  { "detection_range": 7.0,  "attack_range": 1.0, "damage": 8.0,  "speed": 1.0, "attack_cooldown": 2.0, "hp": 120.0 },
+        "brute":    { "detection_range": 15.0,  "attack_range": 2, "damage": 150.0, "speed": 1.0, "attack_cooldown": 4.0, "hp": 2000.0 },
+        "mutant":   { "detection_range": 10.0, "attack_range": 2.0, "damage": 50.0, "speed": 2.0, "attack_cooldown": 1.5, "hp": 250.0 }
+    },
+    "buildings": {
+        "lumber_yard":      { "cost": 10.0,  "max_health": 200.0, "sight_range": 5.0 },
+        "watchtower":       { "cost": 50.0, "max_health": 200.0, "sight_range": 10.0 },
+        "unit_shack":       { "cost": 40.0, "max_health": 120.0, "sight_range": 5.0 },
+        "barracks":         { "cost": 100.0, "max_health": 250.0, "sight_range": 6.0 },
+        "barricade":        { "cost": 10.0, "max_health": 250.0,  "sight_range": 5.0 },
+        "windmill":         { "cost": 50.0, "max_health": 100.0, "sight_range": 5.0 },
+        "sandbag":          { "cost": 5.0,  "max_health": 250.0,  "sight_range": 5.0 },
+        "wall":             { "cost": 25.0, "max_health": 300.0, "sight_range": 5.0 },
+        "machine_gun_nest": { "cost": 75.0, "max_health": 80.0,  "sight_range": 5.0 },
+        "trap":             { "cost": 15.0, "max_health": 20.0,  "sight_range": 5.0 },
+        "farm":             { "cost": 0.0,  "max_health": 200.0, "sight_range": 5.0 },
+        "house":            { "cost": 0.0,  "max_health": 150.0, "sight_range": 5.0 },
+        "police_station":   { "cost": 0.0,  "max_health": 250.0, "sight_range": 5.0 },
+        "petrol_station":   { "cost": 0.0,  "max_health": 180.0, "sight_range": 5.0 },
+        "command_centre":   { "cost": 0.0,  "max_health": 500.0, "sight_range": 8.0 },
+        "wheat_field":      { "cost": 5.0,  "max_health": 20.0,  "sight_range": 0.0 }
+    },
+    "build_menu_order": [
+        "lumber_yard",
+        "unit_shack",
+        "barracks",
+        "wheat_field",
+        "watchtower",
+        "barricade",
+        "sandbag",
+        "wall",
+        "machine_gun_nest",
+        "trap",
+        "windmill"
+    ],
+    "gathering": {
+        "farm": 2.0,
+        "lumber_yard": 1.5,
+        "house": 1.0,
+        "police_station": 0.5,
+        "petrol_station": 0.3,
+        "gather_range": 3.0
+    },
+    "vehicles": {
+        "land_rover":  { "max_fuel": 80.0,  "fuel_consumption": 0.5, "speed": 6.0, "max_gunners": 1 },
+        "transit_van": { "max_fuel": 100.0, "fuel_consumption": 0.6, "speed": 5.0, "max_gunners": 0 },
+        "pickup":      { "max_fuel": 90.0,  "fuel_consumption": 0.5, "speed": 5.5, "max_gunners": 1 },
+        "tractor":     { "max_fuel": 120.0, "fuel_consumption": 0.8, "speed": 3.0, "max_gunners": 0 },
+        "armoured":    { "max_fuel": 150.0, "fuel_consumption": 1.5, "speed": 4.0, "max_gunners": 2 }
+    },
+    "heroes": {
+        "damage_aura":  { "aura_radius": 5.0, "aura_bonus": 0.2,  "combat_bonus": 0.5 },
+        "defense_aura": { "aura_radius": 5.0, "aura_bonus": 0.25, "combat_bonus": 0.3 },
+        "speed_aura":   { "aura_radius": 6.0, "aura_bonus": 0.15, "combat_bonus": 0.2 },
+        "heal_aura":    { "aura_radius": 4.0, "aura_bonus": 1.0,  "combat_bonus": 0.1 }
+    },
+    "combat": {
+        "elevation_bonus": 1.25,
+        "bloated_explosion_radius": 3.0,
+        "bloated_explosion_damage": 20.0
+    },
+    "movement": {
+        "separation_radius": 0.4,
+        "separation_strength": 0.5,
+        "arrival_distance": 0.15,
+        "max_nudge_per_frame": 0.1,
+        "zombie_separation_radius": 0.3,
+        "zombie_separation_strength": 0.6,
+        "zombie_max_nudge_per_frame": 0.03,
+        "unit_default_max_accel_t_per_s2": 0.6
+    },
+    "lumber": {
+        "chop_rate": 2.0,
+        "carry_capacity": 10.0,
+        "max_workers_per_mill": 4,
+        "work_range": 1.5,
+        "tree_resource_amount": 30.0,
+        "tree_search_radius": 30.0,
+        "deposit_rate": 1.0
+    },
+    "farming": {
+        "grow_time": 15.0,
+        "harvest_time": 3.0,
+        "harvest_yield": 5.0,
+        "seed_cost": 5.0,
+        "work_range": 1.5,
+        "search_radius": 20.0,
+        "max_workers": 4,
+        "auto_assign": false,
+        "carry_capacity": 10.0,
+        "deposit_rate": 5.0,
+        "blades_per_tile": 25,
+        "blade_min_height": 0.1,
+        "blade_max_height": 0.4,
+        "blade_width": 0.15,
+        "stubble_height": 0.08,
+        "stubble_width": 0.2,
+        "sway_strength": 0.5,
+        "static_lean": 0.05
+    },
+    "construction": {
+        "build_range": 2.0,
+        "construction_rate": 0.1
+    },
+    "horde": {
+        "base_count": 50,
+        "count_per_wave": 5,
+        "wave_interval": 300.0,
+        "warning_time": 5.0,
+        "noise_threshold": 100.0,
+        "initial_wave_timer": 30.0,
+        "type_unlock_waves": {
+            "runner": 2,
+            "brute": 4,
+            "screamer": 6,
+            "mutant": 8
+        }
+    },
+    "command_centre": {
+        "power_range": 12.0,
+        "worker_train_cost": 25.0,
+        "hero_upgrade_food_cost": 100.0,
+        "hero_upgrade_materials_cost": 100.0
+    },
+    "barracks": {
+        "queue_max": 5,
+        "militia_train_cost": 30.0,
+        "militia_train_secs": 12.0,
+        "hunter_train_cost": 40.0,
+        "hunter_train_secs": 18.0
+    },
+    "windmill": {
+        "power_range": 8.0,
+        "blade_spin_speed": 1.5
+    },
+    "infection": {
+        "unit_death_anim_seconds": 2.0,
+        "prone_pause_seconds": 0.6,
+        "rising_anim_seconds": 0.7
+    },
+    "animation": {
+        "idle_threshold": 0.032,
+        "blend_secs": 0.15
+    },
+    "population": {
+        "base_cap": 5,
+        "per_house": 5,
+        "per_unit_shack": 5
+    },
+    "noise": {
+        "decay_rate": 2.0,
+        "chop_noise": 5.0,
+        "deposit_noise": 3.0,
+        "construction_noise": 5.0,
+        "zombie_spot_noise": 2.0,
+        "screamer_noise": 10.0,
+        "horde_burst_intensity": 80.0,
+        "horde_burst_radius": 10.0,
+        "horde_trail_intensity": 3.0,
+        "noise_floor": 0.1,
+        "min_noise_radius": 1.0
+    },
+    "flow_field": {
+        "heat_threshold": 2.0,
+        "rebuild_interval": 30,
+        "max_range": 0
+    },
+    "zombie_ai": {
+        "alert_timeout": 5.0,
+        "chase_stuck_timeout": 8.0,
+        "spot_noise_stall_time": 4.0,
+        "flow_stall_time": 3.0,
+        "wander_speed_multiplier": 0.33
+    },
+    "camera": {
+        "min_zoom": 0.5,
+        "max_zoom": 9.0,
+        "scroll_speed": 30.0,
+        "edge_scroll_threshold": 20.0,
+        "tile_px": 32.0,
+        "elevation_px": 12.0,
+        "rotation_speed": 1.5,
+        "default_rotation_degrees": 45.0
+    },
+    "terrain": {
+        "steep_threshold": 10,
+        "hedge_hp": 50.0,
+        "elevation_smooth_passes": 2,
+        "max_placement_slope": 15,
+        "hill_movement_cost": 1.2,
+        "partial_coverage_cost_ramp": 4.0,
+        "partial_coverage_pathfinding_ramp": 200.0
+    },
+    "garrison": {
+        "watchtower_capacity": 4,
+        "machine_gun_nest_capacity": 2,
+        "range_bonus": 1.5,
+        "dismount_scatter_radius": 1.5,
+        "slot_inset": 0.3
+    },
+    "interaction": {
+        "unit_select_radius": 0.5,
+        "building_select_margin": 0.25,
+        "attack_target_radius": 0.75,
+        "garrison_target_radius": 1.5,
+        "capture_target_radius": 1.5,
+        "harvest_target_radius": 1.0,
+        "sprite_hit_width_fraction": 0.45,
+        "sprite_hit_height_fraction": 0.6
+    },
+    "audio": {
+        "master_volume": 0.8,
+        "sfx_volume": 1.0,
+        "music_volume": 0.5,
+        "ambient_volume": 0.2,
+        "max_concurrent_sounds": 32,
+        "spatial_falloff_distance": 30.0,
+        "music_crossfade_seconds": 3.0,
+        "tension_zombie_threshold": 10,
+        "tension_proximity_radius": 25.0,
+        "combat_zombie_threshold": 20,
+        "combat_command_centre_radius": 4.0,
+        "footstep_volume": 0.15
+    },
+    "infected_building": {
+        "spawn_interval": 240.0,
+        "fog_particle_rate": 3.0,
+        "fog_particle_lifetime": 2.5,
+        "fog_color": [0.2, 0.8, 0.2]
+    },
+    "worker_flee": {
+        "detection_range": 3.0,
+        "flee_speed_multiplier": 1.5,
+        "cooldown": 3.0
+    },
+    "building_emitters": {
+        "smoke_rate": 12.0,
+        "smoke_spread": 0.1,
+        "smoke_rise_speed": 0.1
+    },
+    "particles": {
+        "blood": {
+            "gravity_scale": 1.0, "size_range": [0.05, 0.12], "speed_range": [1.0, 3.0],
+            "lifetime_range": [0.3, 0.8], "blend_mode": "alpha", "color": [0.6, 0.0, 0.0]
+        },
+        "smoke": {
+            "gravity_scale": -0.3, "size_range": [0.1, 0.3], "speed_range": [0.2, 0.8],
+            "lifetime_range": [1.0, 2.5], "blend_mode": "alpha", "color": [0.4, 0.4, 0.4]
+        },
+        "dust": {
+            "gravity_scale": 0.3, "size_range": [0.05, 0.15], "speed_range": [0.5, 1.5],
+            "lifetime_range": [0.5, 1.2], "blend_mode": "alpha", "color": [0.7, 0.6, 0.4]
+        },
+        "spark": {
+            "gravity_scale": 0.5, "size_range": [0.02, 0.05], "speed_range": [2.0, 5.0],
+            "lifetime_range": [0.2, 0.5], "blend_mode": "additive", "color": [1.0, 0.8, 0.3]
+        },
+        "fire": {
+            "gravity_scale": -0.5, "size_range": [0.08, 0.2], "speed_range": [0.3, 1.0],
+            "lifetime_range": [0.3, 0.8], "blend_mode": "additive", "color": [1.0, 0.5, 0.1]
+        },
+        "debris": {
+            "gravity_scale": 1.0, "size_range": [0.04, 0.1], "speed_range": [1.5, 4.0],
+            "lifetime_range": [0.5, 1.5], "blend_mode": "alpha", "color": [0.5, 0.4, 0.3]
+        },
+        "arrow_trail": {
+            "gravity_scale": 0.1, "size_range": [0.015, 0.035], "speed_range": [0.1, 0.3],
+            "lifetime_range": [0.4, 0.7], "blend_mode": "alpha", "color": [0.9, 0.85, 0.7]
+        },
+        "wood_chip": {
+            "gravity_scale": 1.2, "size_range": [0.03, 0.08], "speed_range": [1.0, 3.5],
+            "lifetime_range": [0.4, 1.2], "blend_mode": "alpha", "color": [0.65, 0.45, 0.2]
+        },
+        "destruction_duration": 1.2,
+        "building_dissolve_color": [2.0, 0.6, 0.1],
+        "tree_dissolve_color": [0.2, 0.9, 0.1],
+        "zombie_attack_blood_count": 6,
+        "zombie_attack_dust_count": 8
+    }
+}

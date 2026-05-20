@@ -1,0 +1,134 @@
+{
+    "levels": [
+        {
+            "name": "Default",
+            "file": "levels/default.json",
+            "description": "Standard starting scenario"
+        },
+        {
+            "name": "Generated",
+            "file": "levels/Generated.json",
+            "description": "Generated map"
+        },
+        {
+            "name": "Blank 256x256",
+            "file": "levels/blank_256.json",
+            "description": "Empty 256x256 grass map for tracing / heightmap import"
+        },
+        {
+            "name": "Blank 128x128",
+            "file": "levels/blank_128.json",
+            "description": "Empty 128x128 grass map for tracing / heightmap import"
+        },
+        {
+            "name": "Blank 196x196",
+            "file": "levels/blank_196.json",
+            "description": "Empty 196x196 grass map for tracing / heightmap import"
+        },
+                {
+            "name": "Hillside Court",
+            "file": "levels/Level 1 hillside court.json",
+            "description": "A foothold, capture the farms and survive the horde."
+        },
+        {
+            "name": "Big Hillside Court",
+            "file": "levels/big hillside.json",
+            "description": "Rolling farmland along the A52 with scattered farms to capture"
+        },
+        {
+            "name": "Old Hillside Court",
+            "file": "levels/Old Level 1 hillside court.json",
+            "description": "Rolling farmland along the A52 with scattered farms to capture"
+        },
+        {
+            "name": "Full Base",
+            "file": "tests/levels/full_base.json",
+            "description": "Pre-built base with full defenses"
+        },
+        {
+            "name": "Basic Combat",
+            "file": "tests/levels/basic_combat.json",
+            "description": "Small combat encounter"
+        },
+{
+            "name": "Lumber Cycle",
+            "file": "tests/levels/lumber_cycle.json",
+            "description": "Test lumber gathering"
+        },
+        {
+            "name": "Hunter vs Walker",
+            "file": "tests/levels/hunter_vs_walker.json",
+            "description": "Single hunter fights a walker"
+        },
+        {
+            "name": "Worker Idle",
+            "file": "tests/levels/worker_idle.json",
+            "description": "Idle worker on empty map"
+        },
+        {
+            "name": "Bldg: Command Centre",
+            "file": "levels/buildings/command_centre.json",
+            "description": "Inspect Command Centre (4x4)"
+        },
+        {
+            "name": "Bldg: Farm",
+            "file": "levels/buildings/farm.json",
+            "description": "Inspect Farm (3x3)"
+        },
+        {
+            "name": "Bldg: Lumber Yard",
+            "file": "levels/buildings/lumber_yard.json",
+            "description": "Inspect Lumber Yard (3x2)"
+        },
+        {
+            "name": "Bldg: House",
+            "file": "levels/buildings/house.json",
+            "description": "Inspect House (2x2)"
+        },
+        {
+            "name": "Bldg: Police Station",
+            "file": "levels/buildings/police_station.json",
+            "description": "Inspect Police Station (3x3)"
+        },
+        {
+            "name": "Bldg: Petrol Station",
+            "file": "levels/buildings/petrol_station.json",
+            "description": "Inspect Petrol Station (3x2)"
+        },
+        {
+            "name": "Bldg: Barricade",
+            "file": "levels/buildings/barricade.json",
+            "description": "Inspect Barricade (1x1)"
+        },
+        {
+            "name": "Bldg: Sandbag",
+            "file": "levels/buildings/sandbag.json",
+            "description": "Inspect Sandbag (1x1)"
+        },
+        {
+            "name": "Bldg: Wall",
+            "file": "levels/buildings/wall.json",
+            "description": "Inspect Wall (1x1)"
+        },
+        {
+            "name": "Bldg: Watchtower",
+            "file": "levels/buildings/watchtower.json",
+            "description": "Inspect Watchtower (2x2)"
+        },
+        {
+            "name": "Bldg: Machine Gun Nest",
+            "file": "levels/buildings/machine_gun_nest.json",
+            "description": "Inspect Machine Gun Nest (2x2)"
+        },
+        {
+            "name": "Bldg: Trap",
+            "file": "levels/buildings/trap.json",
+            "description": "Inspect Trap (1x1)"
+        },
+        {
+            "name": "Bldg: Wheat Field",
+            "file": "levels/buildings/wheat_field.json",
+            "description": "Inspect Wheat Field (1x1)"
+        }
+    ]
+}

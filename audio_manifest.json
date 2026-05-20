@@ -1,0 +1,120 @@
+{
+    "sfx_rifle": {
+        "path": "assets/audio/sfx_rifle_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_pistol": {
+        "path": "assets/audio/sfx_pistol_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_sniper": {
+        "path": "assets/audio/sfx_sniper_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_bow_release": {
+        "path": "assets/audio/sfx_bow_release_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_explosion": {
+        "path": "assets/audio/sfx_explosion_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_zombie_moan": {
+        "path": "assets/audio/sfx_zombie_moan_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_zombie_attack": {
+        "path": "assets/audio/sfx_zombie_attack_{NN}.mp3",
+        "variations": 3,
+        "volume": 0.2
+    },
+    "sfx_unit_death": {
+        "path": "assets/audio/sfx_unit_death_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_build_hammer": {
+        "path": "assets/audio/sfx_build_hammer_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_lumber_mill": {
+        "path": "assets/audio/sfx_lumber_mill_{NN}.mp3",
+        "variations": 2,
+        "volume": 0.5
+    },
+    "sfx_build_complete": {
+        "path": "assets/audio/sfx_build_complete.mp3",
+        "variations": 0
+    },
+    "ui_horde_warning": {
+        "path": "assets/audio/ui_horde_warning.mp3",
+        "variations": 0
+    },
+    "ui_notification": {
+        "path": "assets/audio/ui_notification.mp3",
+        "variations": 0
+    },
+    "ui_click": {
+        "path": "assets/audio/ui_click.mp3",
+        "variations": 0
+    },
+    "music_calm": {
+        "path": "assets/audio/music_calm_{NN}.mp3",
+        "variations": 2
+    },
+    "music_tension": {
+        "path": "assets/audio/music_tension_{NN}.mp3",
+        "variations": 2
+    },
+    "music_combat": {
+        "path": "assets/audio/music_combat_{NN}.mp3",
+        "variations": 2
+    },
+    "music_horde": {
+        "path": "assets/audio/music_horde_{NN}.mp3",
+        "variations": 1
+    },
+    "amb_wind": {
+        "path": "assets/audio/amb_wind.mp3",
+        "variations": 0
+    },
+    "amb_birds_daytime": {
+        "path": "assets/audio/amb_birds_daytime.mp3",
+        "variations": 0
+    },
+    "amb_horde_distant": {
+        "path": "assets/audio/amb_horde_distant.mp3",
+        "variations": 0
+    },
+    "amb_horde_medium": {
+        "path": "assets/audio/amb_horde_medium.mp3",
+        "variations": 0
+    },
+    "sfx_zombie_death": {
+        "path": "assets/audio/sfx_zombie_death_{NN}.mp3",
+        "variations": 2
+    },
+    "sfx_building_destroy": {
+        "path": "assets/audio/sfx_building_destroy_{NN}.mp3",
+        "variations": 3
+    },
+    "sfx_build_place": {
+        "path": "assets/audio/sfx_build_place.mp3",
+        "variations": 0
+    },
+    "sfx_unit_select": {
+        "path": "assets/audio/sfx_unit_select_{NN}.mp3",
+        "variations": 1
+    },
+    "sfx_unit_move": {
+        "path": "assets/audio/sfx_unit_move_{NN}.mp3",
+        "variations": 2
+    },
+    "sfx_footsteps_grass": {
+        "path": "assets/audio/sfx_footsteps_grass_{NN}.mp3",
+        "variations": 3
+    },
+    "music_menu": {
+        "path": "assets/audio/music_menu.mp3",
+        "variations": 0
+    }
+}

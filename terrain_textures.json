@@ -1,0 +1,115 @@
+{
+  "_comment": "Terrain texture manifest — texture paths and per-texture settings",
+  "settings": {
+    "use_packed_layers": true,
+    "tiles_per_texture_repeat": 8,
+    "_tiles_per_texture_repeat_comment": "How many tiles before grass texture repeats",
+    "uv_y_scale": 0.5,
+    "_uv_y_scale_comment": "V-axis UV multiplier for isometric foreshortening. Ignored in perspective mode (forced to 1.0)",
+    "normal_strength": 1.5,
+    "_normal_strength_comment": "Normal map intensity multiplier. 0 = flat, 1.0 = subtle, 2.0+ = strong",
+    "parallax_strength": 0.05,
+    "_parallax_strength_comment": "Height scale for parallax mapping. 0 = disabled, 0.02-0.08 typical",
+    "specular_strength": 0.3,
+    "_specular_strength_comment": "Intensity of specular highlights (Blinn-Phong). 0 = matte/no highlights, 0.1-0.2 = subtle sheen (dirt, field), 0.3-0.5 = moderate (damp grass, rocks), 0.6-1.0 = glossy/wet look, 1.0+ = strong mirror-like highlights. Roughness from height map G channel modulates per-texel (darker G = rougher = less specular).",
+    "anisotropic_filtering": 8,
+    "_anisotropic_filtering_comment": "Texture anisotropic filtering level (0 = off, 4/8/16). Reduces blurring at steep view angles",
+    "cliff_displacement_strength": 2,
+    "_cliff_displacement_strength_comment": "World-space magnitude of static geometric displacement on cliff-oriented slots (pushes subdivided vertices along outward normal by height map). 0 = flat cliffs, 0.2 = subtle, 0.4 = default, 0.8+ = pronounced. Only affects slots with cliff_oriented: true.",
+    "cliff_displacement_subdivisions": 4,
+    "_cliff_displacement_subdivisions_comment": "Grid subdivision per cliff face (1 = no subdivision/flat). 4 = 4x4 inner grid = 32 triangles per face. Higher = more geometric detail but more vertices.",
+    "plateau_steep_tiles": false,
+    "_plateau_steep_tiles_comment": "When true, steep sloped tiles are converted to flat plateaus at tilemap build time so adjacent tiles at different elevations form real vertical cliff faces. Required for the cliff_oriented rock texture to look correct (otherwise UVs streak on tilted tops). Set false to revert to smooth terrain if cliffs look wrong.",
+    "plateau_slope_threshold": 14,
+    "_plateau_slope_threshold_comment": "Corner elevation diff (in tenths, 10 = 1 cell) above which a tile is flattened into a plateau. 14 = 1.4 cells diff, matches the renderer's steep_rocks threshold. Lower = more stepping (more cliffs), higher = fewer but bigger cliffs.",
+    "steep_top_subdivisions": 4,
+    "_steep_top_subdivisions_comment": "TICKET-028: inner-grid subdivision for steep tile top faces. 1 = legacy 2 triangles per tile. 4 = 4×4 inner grid (32 triangles per steep tile). Only tiles with corner-height delta >= steep_top_threshold pay the cost; flat tiles stay at 2 triangles. Bilinear interpolation of corner heights breaks up coarse silhouettes on slopes (river banks, hills).",
+    "steep_top_threshold": 8,
+    "_steep_top_threshold_comment": "Corner elevation diff (in tenths, 10 = 1 cell) above which a top face is subdivided. 8 = 0.8 cells covers river bank slopes; 14 matches plateau_slope_threshold for full cliff territory."
+  },
+  "grass": {
+    "diffuse": "assets/terrain/terrain_grass_seamless.webp",
+    "normal": "assets/terrain/terrain_grass_seamless_nrm.webp",
+    "height": "assets/terrain/terrain_grass_seamless_hgt.webp",
+    "uv_scale": 3,
+    "normal_flip_y": true
+  },
+  "dirt": {
+    "diffuse": "assets/terrain/terrain_dirt.webp",
+    "normal": "assets/terrain/terrain_dirt_nrm.webp",
+    "height": "assets/terrain/terrain_dirt_hgt.webp",
+    "uv_scale": 2,
+    "normal_flip_y": true,
+    "normal_flip_x": false
+  },
+  "rocks": {
+    "_comment": "Dirt/rocks blend texture — maps to the 'rocks' terrain blend slot",
+    "diffuse": "assets/terrain/terrain_dirt_rocks.webp",
+    "normal": "assets/terrain/terrain_dirt_rocks_nrm.png",
+    "height": "assets/terrain/terrain_dirt_rocks_hgt.webp",
+    "normal_flip_y": true,
+    "uv_scale": 5
+  },
+  "leafy": {
+    "diffuse": "assets/terrain/terrain_leafs.webp",
+    "normal": "assets/terrain/terrain_leafs_nrm.webp",
+    "height": "assets/terrain/terrain_leafs_hgt.webp",
+    "uv_scale": 2
+  },
+  "field": {
+    "diffuse": "assets/terrain/terrain_field.webp",
+    "normal": "assets/terrain/terrain_field_nrm.webp",
+    "height": "assets/terrain/terrain_field_hgt.webp",
+    "normal_flip_y": true,
+    "uv_scale": 1
+  },
+  "steep_rocks": {
+    "_comment": "Pure rocks texture for steep cliff faces. cliff_oriented=true enables biplanar X+Z sampling, 180° UV rotation, and per-axis reoriented normals (for textures authored as vertical cliff faces).",
+    "diffuse": "assets/terrain/terrain_rocks.webp",
+    "normal": "assets/terrain/terrain_rocks_nrm.webp",
+    "height": "assets/terrain/terrain_rocks_hgt.webp",
+    "normal_flip_y": true,
+    "uv_scale": 2,
+    "cliff_oriented": true
+  },
+  "steep_rocks_02": {
+    "_comment": "Second rocks variant, noise-blended with steep_rocks for visual variety",
+    "diffuse": "assets/terrain/terrain_rocks_02.webp"
+  },
+  "road": {
+    "diffuse": "assets/terrain/terrain_road_seamless.webp",
+    "normal": "assets/terrain/terrain_road_seamless_nrm.webp",
+    "height": "assets/terrain/terrain_road_seamless_hgt.webp"
+  },
+  "hedge": {
+    "diffuse": "assets/textures/hedge_diffuse.webp",
+    "normal": "assets/textures/hedge_nrm.webp",
+    "height": "assets/textures/hedge_diffuse_hgt.webp"
+  },
+  "wheat": {
+    "diffuse": "assets/textures/wheat.webp"
+  },
+  "wet_gravel": {
+    "_comment": "River-adjacent bank overlay (TICKET-017 Phase 3c). Rendered as a separate pass on `river_adjacent` tiles, layered between roads and water.",
+    "diffuse": "assets/terrain/terrain_wet_gravel.webp",
+    "normal": "assets/terrain/terrain_wet_gravel_nrm.webp",
+    "height": "assets/terrain/terrain_wet_gravel_hgt.webp",
+    "uv_scale": 1,
+    "_uv_scale_comment": "World-space UV multiplier for the bank-overlay texture. Lower = texture tiles over a larger area (coarser pattern); higher = smaller tighter pattern. 0.3 tiles once every ~3.3 world units.",
+    "normal_flip_y": true
+  },
+  "bog": {
+    "_comment": "Wet bog terrain (TICKET-020 follow-up). Slice 4 of the packed-layer array. Per-fragment weight comes from a_terrain_id_2.x (second vec4 vertex attribute introduced to extend past the original 4-channel limit).",
+    "diffuse": "assets/terrain/terrain_bog.webp",
+    "normal": "assets/terrain/terrain_bog_nrm.webp",
+    "height": "assets/terrain/terrain_bog_hgt.webp",
+    "uv_scale": 2,
+    "normal_flip_y": false,
+    "normal_flip_x": false,
+    "normal_bias": [
+      -0.15,
+      -0.3
+    ],
+    "_normal_bias_comment": "TICKET-106: bog's normal map has a non-zero average tilt (grass tufts all lean toward one side). Simple sign-flips can only rotate the bias by 90/180°; this 2-vector subtracts the authored average from every per-fragment map_n.xy so the mean lands at zero. Sweep these two numbers (raw tangent units, -1..+1 range) until the Blinn-Phong peak fires when the camera looks toward the sun. Per-pixel surface detail is preserved — only the average shifts. Start with both at 0; the highlight peaks on the wrong side, then nudge x/y in 0.05 increments to find the value where the peak aligns with the sun-facing camera azimuth."
+  }
+}

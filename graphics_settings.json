@@ -1,0 +1,261 @@
+{
+    "_comment": "Graphics settings - tweakable rendering constants",
+
+    "resolution": {
+        "_comment": "Canvas resolution in pixels",
+        "width": 1920,
+        "height": 1080
+    },
+
+    "shadow": {
+        "_comment": "Shadow map quality and appearance",
+        "map_size": 8192,
+        "pcf_bias": 0.004,
+        "pcf_kernel_scale": 0.8,
+        "shadow_darkness": 0.2,
+        "_shadow_darkness_comment": "0.0 = fully black shadows, 1.0 = no shadows",
+        "sprite_shadow_floor": 0.05,
+        "_sprite_shadow_floor_comment": "TICKET-096: brightness floor for sprites in full shadow. 0.30 matches the model PBR ambient term (~0.3 × albedo) so a sprite and a model in the same shadow read at the same darkness. Was hardcoded 0.55 (too bright vs. models).",
+        "sprite_caster_bias": 0.01,
+        "_sprite_caster_bias_comment": "Depth bias for sprite shadow casters; closes gap between shadow and feet",
+        "model_caster_bias": 0.01,
+        "_model_caster_bias_comment": "Shadow-caster depth push for static + skinned 3D models (NDC units). Note: this shader pulls the caster TOWARD the light (`gl_Position.z -= bias`) to keep shadows attached at object base, so increasing this value INCREASES self-shadowing — the receiver-side pcf_bias has to dominate. Pair with pcf_bias > 0.5 * model_caster_bias + slope_bias for clean lit surfaces.",
+        "per_direction_ground_y": false,
+        "_per_direction_ground_y_comment": "Use per-anim ground_y_overrides from manifest (pixel-scanned) instead of entity-level ground_y (Blender foot bone)",
+        "cull_in_fog": true,
+        "_cull_in_fog_comment": "TICKET-035: skip the shadow caster pass for props/impostors whose shadow ray lies entirely under fog (alpha ≥ 0.95 along all 4 sample points), and skip the hedge shadow VAO when the whole network is fogged. Default on; flip off if you spot a visual regression at fog edges.",
+        "_note": "Higher kernel_scale = softer edges, higher darkness = lighter shadows"
+    },
+
+    "_terrain_comment": "Terrain textures and settings moved to terrain_textures.json",
+
+    "road": {
+        "_comment": "Spline road rendering",
+        "lod_bias": -1.5,
+        "_lod_bias_comment": "Negative = sharper texture. -2.0 very sharp, -0.5 softer. Adjust if grainy or blurry",
+        "z_bias": 0.05,
+        "_z_bias_comment": "Height above terrain to prevent z-fighting. Increase if road flickers",
+        "max_segment_length": 0.5,
+        "_max_segment_length_comment": "Road mesh subdivision step. Lower = smoother on hills, higher = less geometry",
+        "default_half_width": 1,
+        "anisotropic_filtering": 8
+    },
+
+    "hedge": {
+        "_comment": "Spline-based 3D hedge rendering",
+        "half_width": 0.25,
+        "_half_width_comment": "Half-width of hedge ribbon in world tiles",
+        "height": 1,
+        "_height_comment": "Hedge height in elevation units",
+        "z_bias": 0.02,
+        "_z_bias_comment": "Height above terrain to prevent z-fighting",
+        "max_segment_length": 0.5,
+        "_max_segment_length_comment": "Subdivision step for terrain-following. Lower = smoother on hills",
+        "uv_scale": 1,
+        "_uv_scale_comment": "UV multiplier for hedge texture. Higher = more zoomed out, lower = zoomed in",
+        "chamfer": 0.15,
+        "_chamfer_comment": "Size of the beveled top edge in world units. 0 = sharp box, higher = more rounded",
+        "shadow_caster_bias": -0.01,
+        "_shadow_caster_bias_comment": "Depth bias for hedge shadow casters; prevents self-shadowing at the base. Higher = shadow starts further from hedge"
+    },
+
+    "fog": {
+        "_comment": "Fog of war appearance",
+        "fade_width": 5.0,
+        "_fade_width_comment": "Tiles of smooth gradient at sight range edge",
+        "alpha_unexplored": 1.0,
+        "alpha_explored": 0.6,
+        "alpha_visible": 0.0
+    },
+
+    "antialias": {
+        "_comment": "Anti-aliasing toggle for WebGL context",
+        "enabled": true,
+        "_enabled_comment": "true = browser native MSAA on the WebGL canvas, false = no AA (sharper but may have jaggies)"
+    },
+
+    "ssao": {
+        "_comment": "Screen-Space Ambient Occlusion — darkens creases and contact areas",
+        "enabled": true,
+        "radius": 0.6,
+        "_radius_comment": "World-space sample radius. Larger = wider darkening, 0.3-1.0 typical",
+        "intensity": 1.5,
+        "_intensity_comment": "Occlusion multiplier. Higher = darker crevices. 0.5-3.0 typical",
+        "bias": 0.05,
+        "_bias_comment": "Depth bias to prevent self-occlusion on flat surfaces. 0.01-0.1 typical"
+    },
+
+    "sprites": {
+        "_comment": "TICKET-013 — runtime relighting for character / zombie spritesheets that ship with a paired view-space normal sheet (worker, hunter, militia, soldier, sniper, engineer, zombie_walker, zombie_bloated, plus their *_death siblings). Sprite sheets without a normal_file (buildings, arrows, props) ignore this block and take the legacy unlit path.",
+        "normal_map_lighting_enabled": true,
+        "_normal_map_lighting_enabled_comment": "Master switch for sprite normal-map relighting. true = sample the paired *_normal.png and apply NdotL × albedo with the runtime sun direction (the dark side of a unit changes as the camera/map rotates). false = treat the albedo bytes as final colour like the old pipeline. Flip to false to A/B the new look against the old baked sun without rebaking.",
+        "direct": 0.954,
+        "_direct_comment": "Direct (sun) contribution multiplier. Default 0.954 ≈ sun_intensity (3.0) / π — matches MODEL_FRAG_SRC's diffuse Lambert scale and IMPOSTOR_FRAG_SRC's `0.318 * 3.0`, so a sprite and a 3D mesh in the same scene compute the same NdotL × albedo brightness. Lit-and-sun-facing surfaces saturate to 1.0 (the shader clamps `ambient + direct × ndl` to [0,1]). Lower values dim every angle uniformly; raise to push more highlights into clamping.",
+        "ambient": 0.45,
+        "_ambient_comment": "Ambient contribution. Default 0.3 matches `lighting.ambient_strength` and the model PBR ambient term, so the back-to-sun side of a unit reads at the same brightness as a 3D building's ambient floor. Shadow does NOT attenuate this (only direct), so 0.3 is the floor brightness when fully shadowed. Raise for a softer/brighter look, lower to push the dark side into near-black."
+    },
+
+    "props": {
+        "_comment": "Prop variation + impostor LOD settings",
+        "tree_variations": 3,
+        "_tree_variations_comment": "Number of tree variants (prop_tree_oak_01..N). 0 = use base model only",
+        "impostors_enabled": false,
+        "_impostors_enabled_comment": "Master switch for baked billboard impostors. false = distant trees always render as full 3D GLB (no LOD swap). Disabled by default while the bake pipeline's rotation convention is still being resolved.",
+        "impostor_distance_tiles": 40.0,
+        "_impostor_distance_tiles_comment": "World-tile distance at which 3D tree/bush props fade from full GLB to their baked billboard impostor. 0 or negative also disables impostors.",
+        "impostor_fade_width_tiles": 4.0,
+        "_impostor_fade_width_tiles_comment": "Width of the crossfade band around the impostor distance. 0 = hard swap, larger = smoother transition."
+    },
+
+    "lighting": {
+        "_comment": "Scene lighting (matches Blender render setup)",
+        "sun_intensity": 3.0,
+        "sun_color": [1.0, 0.98, 0.95],
+        "ambient_strength": 0.3,
+        "_ambient_strength_comment": "Matches Blender world background strength",
+        "foliage_translucency": 0.65,
+        "_foliage_translucency_comment": "How much light transmits through thin leaves (0.0 = opaque, 1.0 = fully translucent). Applied to models with sway enabled"
+    },
+
+    "camera": {
+        "_comment": "Camera projection settings",
+        "projection": "perspective",
+        "_projection_comment": "isometric or perspective",
+        "perspective_fov": 45.0,
+        "_perspective_fov_comment": "Vertical field of view in degrees (perspective mode only)",
+        "perspective_pitch": 20.0,
+        "_perspective_pitch_comment": "Camera tilt angle in degrees from horizontal (perspective mode only)",
+        "perspective_y_scale": 1.3,
+        "_perspective_y_scale_comment": "Vertical height exaggeration. 1.414 = isometric proportions, 1.0 = true 3D, lower = flatter buildings"
+    },
+
+    "sky": {
+        "_comment": "TICKET-023 — sky-dome fullscreen pass that replaces the flat clear-colour rectangle past the map edge. Drawn before terrain with depth test/write off so opaque geometry overdraws it on the playable area. Currently: blue overhead, BLACK below horizon — so past the green mist wall reads as 'undiscovered FoW' void.",
+        "enabled": true,
+        "zenith": [0.796, 0.91, 0.906],
+        "_zenith_comment": "Default [0.55, 0.68, 0.82]. Colour straight overhead. Cooler/bluer end of the dome.",
+        "horizon": [0.2, 0.239, 0.184],
+        "_horizon_comment": "Default [0.80, 0.82, 0.78]. Currently black so past the map edge reads as void/undiscovered (matches fog-of-war black). Atmospheric fog inside the map still hazes to its own colour (see atmosphere.color), so the seam is hidden by the edge_mist wall.",
+        "ground": [0.0, 0.0, 0.0],
+        "_ground_comment": "Default [0.45, 0.40, 0.35]. Band BELOW the horizon. Black to extend the void look further down if the camera dips.",
+        "softness": 0.10,
+        "_softness_comment": "Default 0.10. Width of the horizon gradient in normalised dot(ray, up). 0 = razor sharp, 0.25 = wide hazy band."
+    },
+
+    "atmosphere": {
+        "_comment": "TICKET-023 — linear distance fog applied as a post-process in the SSAO composite pass. Decoupled from sky.*: the mist wall hides any seam between fog tint and sky colour. All values shown ARE the Rust defaults.",
+        "enabled": true,
+        "start": 40.0,
+        "_start_comment": "Default 40.0. World-tile distance where fog begins ramping up from 0.",
+        "end": 180.0,
+        "_end_comment": "Default 180.0. World-tile distance where fog reaches full strength.",
+        "color": [0.70, 0.80, 0.90],
+        "_color_comment": "Default [0.80, 0.82, 0.78]. Tint the scene fades toward. Matches sky.horizon by default so terrain merges into the dome; try [0,0,0] for void fog.",
+        "strength": 1.0,
+        "_strength_comment": "Default 1.0. Multiplier on the final fog factor (0..1). Lets a level dampen fog without recompiling shaders."
+    },
+
+    "edge_mist": {
+        "_comment": "TICKET-023 — animated swirling mist wall at the playable-map perimeter. A transparent ribbon around the map boundary, fragment-shader fbm noise + domain-warp for the swirl, alpha-blended into the scene. All values shown ARE the Rust defaults.",
+        "enabled": true,
+        "color": [0.376, 0.812, 0.208],
+        "_color_comment": "Default [0.30, 0.62, 0.38]. Green for a 'mystical barrier' feel; pick blue/purple for night levels, orange for hellscape, etc.",
+        "height_tiles": 10.0,
+        "_height_tiles_comment": "Default 12.0. Wall height in world tiles (Y). Should comfortably exceed the tallest map elevation so the mist always covers the cliff face.",
+        "density": 0.2,
+        "_density_comment": "Default 0.85. Overall opacity multiplier on the synthesised noise (0..1). Higher = denser wall; lower = wispier.",
+        "swirl_speed": 0.20,
+        "_swirl_speed_comment": "Default 0.30. Time-driven swirl speed. 0 = frozen; 1.0+ = aggressive churn.",
+        "noise_scale": 0.12,
+        "_noise_scale_comment": "Default 0.12. Spatial frequency of the noise. Lower = bigger swirls; higher = chunkier detail.",
+        "fade_top": 0.3,
+        "_fade_top_comment": "Default 0.55. Height fraction (0..1) where the top alpha fade begins. Below 1.0 means the wall thins out near the top so it doesn't read as a hard horizontal cap.",
+        "outset_tiles": 0.1,
+        "_outset_tiles_comment": "Default 0.5. Outward offset from the map edge in world tiles. Positive pushes the wall past the boundary (hides the terrain cliff face); 0 sits on the boundary; negative pulls it inside the playable area.",
+        "layers": 5,
+        "_layers_comment": "Default 3. Number of parallel ribbons stacked outward to fake 3D volume via parallax. 1 = single flat plane (cheapest); 3 = noticeable depth as the camera moves; 4+ = diminishing returns.",
+        "layer_spacing": 1,
+        "_layer_spacing_comment": "Default 0.6. Outward distance (world tiles) between adjacent layers. Larger = more pronounced parallax / clearer separation, but also more visible 'shell' artefacts at glancing angles.",
+        "layer_alpha_falloff": 0.20,
+        "_layer_alpha_falloff_comment": "Default 0.30. Per-layer alpha multiplier falloff (0..1). Outer layers fade so the stack reads as a single volumetric wall instead of N separate sheets."
+    },
+
+    "ground_plane": {
+        "_comment": "TICKET-023 Phase 4 — infinite ground plane that extends the world past the playable map. One textured quad centred on the map, drawn between the sky dome and the terrain. Currently disabled because the edge_mist wall handles the boundary instead. All values shown ARE the Rust defaults; `enabled` is the only override (default true).",
+        "enabled": false,
+        "_enabled_comment": "Default true. Flip to true to bring the plane back; stacks well with edge_mist if you want grass extending past the wall.",
+        "half_size_tiles": 512.0,
+        "_half_size_tiles_comment": "Default 512.0. Half-extent of the quad from the map centre — covers a 1024-tile square, far past any reasonable far-plane.",
+        "base_y": -0.05,
+        "_base_y_comment": "Default -0.05. World-Y the plane sits at. Slightly below 0 to dodge z-fighting with the terrain mesh's y=0 base.",
+        "tint": [0.7, 0.72, 0.65],
+        "_tint_comment": "Default [0.7, 0.72, 0.65]. RGB multiplier on the sampled grass texture. Desaturate / shift for biome mood without authoring a separate texture.",
+        "uv_scale": 0.05,
+        "_uv_scale_comment": "Default 0.125. Texture repetitions per world tile. 0.125 = one tile per 8 world units — low frequency so the plane doesn't tile obviously."
+    },
+
+    "water": {
+        "_comment": "River / water-body rendering defaults (TICKET-023). Per-river colour/alpha/scroll/foam overrides live on RiverPath in the level JSON; these defaults apply when a river doesn't set its own.",
+        "default_shallow_color": [0.45, 0.58, 0.48, 0.85],
+        "_default_shallow_color_comment": "RGBA at the bank-edge (TICKET-036). Warmer silty river-green, 0.85 alpha. Set alpha lower here to make shore water more see-through than the centre.",
+        "default_deep_color": [0.15, 0.28, 0.25, 0.85],
+        "_default_deep_color_comment": "RGBA at the channel centre. Muted dark green-teal, 0.85 alpha.",
+        "sky_horizon": [0.80, 0.82, 0.78],
+        "_sky_horizon_comment": "Sky colour at the horizon — reflected when the camera view is close to horizontal (TICKET-030). Warmer/hazier.",
+        "sky_zenith": [0.55, 0.68, 0.82],
+        "_sky_zenith_comment": "Sky colour at the zenith — reflected when the camera looks straight down at water. Cooler/bluer.",
+        "fresnel_strength": 0.35,
+        "_fresnel_strength_comment": "Max fraction of sky_tint that shows at grazing. 0 = no sky reflection, 1 = full at grazing",
+        "default_scroll_speed": 1.0,
+        "_default_scroll_speed_comment": "Normal-map UV-scroll multiplier (TICKET-029). 1.0 = baseline, 2.0 = twice as fast",
+        "default_foam_intensity": 1.0,
+        "_default_foam_intensity_comment": "Edge-foam multiplier (TICKET-029). 1.0 = baseline, 0.0 = no foam, 2.0 = choppy",
+        "default_foam_band_width": 0.15,
+        "_default_foam_band_width_comment": "Width of the foam band across the waterline in ribbon-UV units (TICKET-034). 0.05 = narrow glassy, 0.15 = default, 0.3 = wide surf",
+        "specular_exponent": 30.0,
+        "_specular_exponent_comment": "Blinn-Phong specular tightness (TICKET-024). Lower = broader sheen. 80 = old behaviour (sparkly), 10-15 = wide lobe (always-ish visible), 20-30 = smooth but sun-axis biased",
+        "specular_strength": 0.4,
+        "_specular_strength_comment": "Specular highlight strength ceiling (TICKET-024). 0 = off, 0.2-0.4 = natural sheen, 1.0 = old blown-out highlights",
+        "ripple_primary_scale": [0.4, 0.2],
+        "_ripple_primary_scale_comment": "Primary ripple-layer UV tiling (across, along) in ribbon-local UV (TICKET-032). Lower numbers = bigger ripples. 0.5 shipped default.",
+        "ripple_secondary_scale": [0.3, 0.17],
+        "_ripple_secondary_scale_comment": "Secondary ripple-layer UV tiling, cross-faded with primary to hide periodicity. Different scale from primary is the point.",
+        "fresnel_exponent": 1.0,
+        "_fresnel_exponent_comment": "Fresnel falloff sharpness (TICKET-032). Higher = reflection only at very grazing angles. Lower = more reflection at shallower view angles. 3.0 = shipped default.",
+        "specular_spread_angle": 0.2,
+        "_specular_spread_angle_comment": "TICKET-035 — angular spread (radians) of 4 virtual suns used for the specular highlight. Widens the angle range where specular is visible without softening the lobe itself. 0 = single sun (old behaviour), 0.14 rad (~8°) = default, 0.25 rad (~14°) = wide coverage."
+    },
+
+    "profile": {
+        "_comment": "Developer profiling toggles (TICKET-002). Default off — turning on inserts gl.finish() after each major pass to time them. Slows the frame; numbers are only valid as relative weights, not absolute frame budget.",
+        "gpu_passes": true,
+        "_gpu_passes_comment": "When true, the renderer measures shadow / main / SSAO pass GPU wall-clock and exposes it via the debug HUD (debug_overlay must also be on)."
+    },
+
+    "selection_glow": {
+        "_comment": "TICKET-082 — building selection halo (additive WebGL glow on the projected convex hull).",
+        "intensity": 0.5,
+        "_intensity_comment": "Brightness multiplier on the per-frame pulse fed to the glow shader. 0.0 = no glow at all, 1.0 = the original 'very strong' look. Tune to taste."
+    },
+
+    "hero_glow": {
+        "_comment": "Hero unit glow shader settings",
+        "radius": 2.5,
+        "_radius_comment": "Glow halo size in texels. Higher = wider glow around sprite edges",
+        "intensity": 0.8,
+        "_intensity_comment": "Overall glow brightness multiplier. 0.0 = invisible, 1.0 = full",
+        "tint_strength": 0.12,
+        "_tint_strength_comment": "How much the hero sprite is tinted with the glow color (0.0-1.0)",
+        "pulse_speed": 3.0,
+        "_pulse_speed_comment": "Glow breathing animation speed in radians/sec. 0 = no pulse",
+        "scale": 1.2,
+        "_scale_comment": "Sprite scale multiplier for hero units. 1.0 = normal size",
+        "colors": {
+            "_comment": "RGBA glow color per hero ability",
+            "damage_aura":  [1.0, 0.3, 0.3, 0.8],
+            "defense_aura": [1, 0.494, 0, 1],
+            "speed_aura":   [1.0, 0.86, 0.24, 0.8],
+            "heal_aura":    [0.3, 1.0, 0.47, 0.8]
+        }
+    }
+}

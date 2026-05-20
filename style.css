@@ -1,0 +1,730 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+/* Loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#loading-content {
+    text-align: center;
+    width: 400px;
+}
+
+#loading-title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #c44;
+    margin-bottom: 32px;
+    /* TICKET-029 — readable over a level-background image */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+#loading-bar-track {
+    width: 100%;
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#loading-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #a33, #c44);
+    transition: width 0.25s ease-out;
+}
+
+#loading-status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+#build-version {
+    margin-top: 24px;
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+/* TICKET-010: terrarium elevation attribution. Pinned on the loading
+   screen because the project has no dedicated credits screen yet. */
+#loading-attribution {
+    margin-top: 16px;
+    font-size: 10px;
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#terrain-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    cursor: none;
+}
+
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: none;
+}
+
+#hud-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#hud-overlay > * {
+    pointer-events: auto;
+}
+
+#minimap-canvas {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #555;
+    z-index: 10;
+}
+
+.resource-bar {
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pause-btn {
+    margin-left: auto;
+    padding: 4px 14px;
+    background: #444;
+    color: #eee;
+    border: 1px solid #666;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.pause-btn:hover {
+    background: #555;
+    border-color: #888;
+}
+
+.pause-btn.paused {
+    background: #3a6;
+    border-color: #5c8;
+    color: #fff;
+}
+
+.pause-btn.paused:hover {
+    background: #4b7;
+}
+
+.warning-banner {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(200, 0, 0, 0.85);
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.build-menu {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8px;
+    border: 1px solid #444;
+    display: grid;
+    grid-template-columns: repeat(4, 48px);
+    gap: 4px;
+    z-index: 10;
+}
+
+.build-btn {
+    width: 48px;
+    height: 48px;
+    background: #333;
+    border: 1px solid #666;
+    color: #eee;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.build-btn:hover {
+    background: #555;
+}
+
+.info-panel {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 12px;
+    border: 1px solid #444;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.command-panel {
+    position: absolute;
+    bottom: 220px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8px;
+    border: 1px solid #556;
+    display: flex;
+    gap: 4px;
+    z-index: 10;
+}
+
+.health-bar {
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background: #4c4;
+    transition: width 0.2s;
+}
+
+.selection-box {
+    position: absolute;
+    border: 1px solid #0f0;
+    background: rgba(0, 255, 0, 0.1);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* ---- Main Menu ---- */
+.main-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+}
+
+.menu-title {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #c44;
+    margin-bottom: 48px;
+    text-shadow: 0 0 20px rgba(200, 60, 60, 0.4);
+}
+
+.menu-build-version {
+    position: fixed;
+    bottom: 12px;
+    right: 16px;
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 0.5px;
+    font-family: monospace;
+    pointer-events: none;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.menu-btn {
+    width: 260px;
+    padding: 14px 32px;
+    background: #222;
+    border: 1px solid #555;
+    color: #eee;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.menu-btn:hover {
+    background: #333;
+    border-color: #c44;
+}
+
+.menu-btn-back {
+    margin-top: 16px;
+    width: 180px;
+    font-size: 14px;
+    padding: 10px 24px;
+}
+
+/* ---- Level Select ---- */
+.level-select {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.level-select-title {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+.level-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0 16px;
+}
+
+.level-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    color: #eee;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: inherit;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.level-btn:hover {
+    background: #2a2a2a;
+    border-color: #c44;
+}
+
+.level-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.level-desc {
+    font-size: 12px;
+    color: #888;
+}
+
+/* TICKET-146 — save-list rows pair the load button with a per-row
+   delete button. The default `.level-item` is a plain wrapper; the
+   `.save-row` modifier turns it into a flex row so the load button
+   takes the available width and the ✕ button sits to its right. */
+.save-row {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: stretch;
+}
+
+.save-row .save-load-btn {
+    flex: 1;
+}
+
+.save-delete-btn {
+    width: 44px;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    color: #c44;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.save-delete-btn:hover {
+    background: #2a1a1a;
+    border-color: #c44;
+}
+
+/* ---- Game Over Overlay ---- */
+.game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 400;
+}
+
+.game-over-content {
+    text-align: center;
+    padding: 48px 64px;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #444;
+}
+
+.game-over-title {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #c44;
+    margin-bottom: 12px;
+}
+
+.game-over-message {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 36px;
+}
+
+.game-over-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* ---------------- Map Editor Panel ---------------- */
+
+.editor-panel {
+    position: absolute;
+    top: 44px;
+    left: 8px;
+    width: 260px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding: 8px;
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #ddd;
+    font-size: 12px;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.editor-panel.hidden {
+    display: none;
+}
+
+.editor-header {
+    font-size: 13px;
+    font-weight: bold;
+    color: #8fb;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #333;
+}
+
+.editor-group {
+    margin-bottom: 6px;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 3px;
+}
+
+.editor-group > summary {
+    list-style: none;
+    padding: 6px 8px;
+    font-weight: bold;
+    color: #ccc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.editor-group > summary::-webkit-details-marker {
+    display: none;
+}
+
+.editor-group > summary::before {
+    content: "▸ ";
+    color: #888;
+    display: inline-block;
+    transition: transform 0.12s;
+}
+
+.editor-group[open] > summary::before {
+    content: "▾ ";
+}
+
+.editor-group-body {
+    padding: 6px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.tool-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 2px;
+    background: #2a2a2a;
+    color: #ddd;
+    border: 1px solid #444;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 10px;
+    min-height: 42px;
+}
+
+.tool-btn:hover {
+    background: #3a3a3a;
+    border-color: #6a6a6a;
+}
+
+.tool-btn.active {
+    background: #2a4a3a;
+    border-color: #6fb;
+    color: #dfd;
+}
+
+.tool-glyph {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.tool-label {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.icon-grid, .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.icon-btn {
+    position: relative;
+    aspect-ratio: 1;
+    background-color: #2a2a2a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #444;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0;
+    min-height: 48px;
+}
+
+.icon-btn:hover {
+    border-color: #6a6a6a;
+    filter: brightness(1.15);
+}
+
+.icon-btn.active {
+    border-color: #6fb;
+    box-shadow: 0 0 0 1px #6fb inset;
+}
+
+.icon-btn.placeholder {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-letter {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c88;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.icon-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 9px;
+    padding: 1px 2px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ccc;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+}
+
+.slider-label {
+    min-width: 84px;
+    color: #bbb;
+}
+
+.slider-row input[type="range"] {
+    flex: 1;
+}
+
+/* TICKET-010 overlay group anchor inputs. Without explicit flex-basis the
+   browser collapses number inputs in a flex row to almost zero width,
+   which makes them look un-editable even though they're functional. */
+.osm-anchor-input {
+    flex: 1;
+    min-width: 0;
+    background: #1a1a1a;
+    color: #eee;
+    border: 1px solid #444;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-size: 11px;
+    font-family: inherit;
+}
+
+.osm-anchor-input:focus {
+    outline: none;
+    border-color: #8fb;
+}
+
+.hint {
+    font-size: 10px;
+    color: #888;
+    line-height: 1.3;
+    padding: 2px 0;
+}
+
+.editor-save-btn {
+    margin-top: 8px;
+    width: 100%;
+    padding: 6px;
+    background: #2a4;
+    color: #fff;
+    border: 1px solid #4c6;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editor-save-btn:hover {
+    background: #3b5;
+}
+
+/* TICKET-025 — undo/redo toolbar above Save Level. */
+.editor-history-row {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.editor-history-btn {
+    flex: 1;
+    padding: 5px 6px;
+    background: #333;
+    color: #ddd;
+    border: 1px solid #555;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.editor-history-btn:hover:not(:disabled) {
+    background: #444;
+    color: #fff;
+}
+
+.editor-history-btn:disabled {
+    background: #1a1a1a;
+    color: #555;
+    border-color: #2a2a2a;
+    cursor: default;
+}

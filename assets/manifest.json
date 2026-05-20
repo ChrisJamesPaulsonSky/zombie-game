@@ -1,0 +1,3241 @@
+{
+  "sheets": {
+    "0": {
+      "file": "sprites/units/worker.webp",
+      "cols": 30,
+      "rows": 29,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/worker_normal.webp"
+    },
+    "23": {
+      "file": "sprites/units/militia.webp",
+      "cols": 35,
+      "rows": 35,
+      "cell_w": 256,
+      "cell_h": 256
+    },
+    "24": {
+      "file": "sprites/units/hunter.webp",
+      "cols": 15,
+      "rows": 15,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/hunter_normal.webp"
+    },
+    "28": {
+      "file": "sprites/zombies/zombie_walker.webp",
+      "cols": 29,
+      "rows": 29,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/zombies/zombie_walker_normal.webp"
+    },
+    "71": {
+      "file": "sprites/ui/arrow.webp",
+      "cols": 1,
+      "rows": 1,
+      "cell_w": 64,
+      "cell_h": 64
+    },
+    "72": {
+      "file": "sprites/units/militia.webp",
+      "cols": 28,
+      "rows": 28,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/militia_normal.webp"
+    },
+    "73": {
+      "file": "sprites/buildings/unit_shack.webp",
+      "cols": 1,
+      "rows": 1,
+      "cell_w": 512,
+      "cell_h": 512
+    },
+    "75": {
+      "file": "sprites/units/worker_death.webp",
+      "cols": 17,
+      "rows": 17,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/worker_death_normal.webp"
+    },
+    "76": {
+      "file": "sprites/units/hunter_death.webp",
+      "cols": 23,
+      "rows": 22,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/hunter_death_normal.webp"
+    },
+    "77": {
+      "file": "sprites/zombies/zombie_walker_death.webp",
+      "cols": 14,
+      "rows": 13,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/zombies/zombie_walker_death_normal.webp"
+    },
+    "79": {
+      "file": "sprites/units/militia_death.webp",
+      "cols": 16,
+      "rows": 15,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/militia_death_normal.webp"
+    },
+    "80": {
+      "file": "sprites/weapons/weapon_bow.png",
+      "cols": 23,
+      "rows": 22,
+      "cell_w": 256,
+      "cell_h": 256
+    },
+    "84": {
+      "file": "sprites/units/hunter_locomotion.webp",
+      "cols": 23,
+      "rows": 22,
+      "cell_w": 256,
+      "cell_h": 256,
+      "normal_file": "sprites/units/hunter_locomotion_normal.webp"
+    },
+    "900": {
+      "file": "sprites/buildings/buildings_atlas.png",
+      "cols": 2,
+      "rows": 1,
+      "cell_w": 512,
+      "cell_h": 512
+    },
+    "901": {
+      "file": "sprites/props/props_atlas.webp",
+      "cols": 3,
+      "rows": 2,
+      "cell_w": 512,
+      "cell_h": 512
+    }
+  },
+  "entities": {
+    "worker": {
+      "sheet_id": 0,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.8008,
+      "ortho_scale": 2.6129,
+      "anims": {
+        "idle_s": {
+          "start_frame": 0,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_sw": {
+          "start_frame": 57,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_w": {
+          "start_frame": 114,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_nw": {
+          "start_frame": 171,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_n": {
+          "start_frame": 228,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_ne": {
+          "start_frame": 285,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_e": {
+          "start_frame": 342,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_se": {
+          "start_frame": 399,
+          "frame_count": 57,
+          "speed": 5,
+          "looping": true
+        },
+        "walking_s": {
+          "start_frame": 456,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_sw": {
+          "start_frame": 471,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_w": {
+          "start_frame": 486,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_nw": {
+          "start_frame": 501,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_n": {
+          "start_frame": 516,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_ne": {
+          "start_frame": 531,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_e": {
+          "start_frame": 546,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_se": {
+          "start_frame": 561,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true
+        },
+        "running_s": {
+          "start_frame": 576,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_sw": {
+          "start_frame": 590,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_w": {
+          "start_frame": 604,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_nw": {
+          "start_frame": 618,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_n": {
+          "start_frame": 632,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_ne": {
+          "start_frame": 646,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_e": {
+          "start_frame": 660,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_se": {
+          "start_frame": 674,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "attack_s": {
+          "start_frame": 688,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_sw": {
+          "start_frame": 708,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_w": {
+          "start_frame": 728,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_nw": {
+          "start_frame": 748,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_n": {
+          "start_frame": 768,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_ne": {
+          "start_frame": 788,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_e": {
+          "start_frame": 808,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_se": {
+          "start_frame": 828,
+          "frame_count": 20,
+          "speed": 10,
+          "looping": false
+        }
+      },
+      "clip_authored_speeds": {
+        "walking": 1.568,
+        "running": 4.0663
+      },
+      "clip_stride_curves": {
+        "walking": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333,
+            0.75,
+            0.791667,
+            0.833333,
+            0.875,
+            0.916667,
+            0.958333,
+            1
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.036944,
+            0.098123,
+            0.161267,
+            0.223447,
+            0.286703,
+            0.356106,
+            0.434393,
+            0.510524,
+            0.581825,
+            0.648265,
+            0.713244,
+            0.776593,
+            0.836073,
+            0.893894,
+            0.955628,
+            1.018953,
+            1.083772,
+            1.151507,
+            1.225135,
+            1.297846,
+            1.366989,
+            1.432953,
+            1.500854,
+            1.567989
+          ],
+          "duration": 1
+        },
+        "running": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.111069,
+            0.295669,
+            0.489268,
+            0.680764,
+            0.862093,
+            1.029757,
+            1.183935,
+            1.331408,
+            1.497144,
+            1.674567,
+            1.853131,
+            2.031433,
+            2.212404,
+            2.384578,
+            2.550037,
+            2.707742,
+            2.88027
+          ],
+          "duration": 0.708333
+        }
+      },
+      "model_natural_size_m": 1.579264,
+      "model_target_size": 0.88,
+      "render_scale": 0.7185,
+      "death_entity": "worker_death",
+      "movement_mode": "root_motion",
+      "clip_speeds": {
+        "walking": 2,
+        "running": 3
+      },
+      "use_true_root_motion": true
+    },
+    "commandcentre_farm": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.61,
+      "emitters": [
+        {
+          "name": "smoke",
+          "offset_x": -1.5886,
+          "offset_y": 2.4815,
+          "elevation": 2.2323
+        },
+        {
+          "name": "smoke",
+          "offset_x": -1.5915,
+          "offset_y": 0.3199,
+          "elevation": 2.2773
+        }
+      ],
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 2.8923,
+      "model_target_size": 6,
+      "render_scale": 1.22,
+      "footprint": [
+        6,
+        6
+      ],
+      "render_3d": true,
+      "model_file": "models/commandcentre_farm.glb"
+    },
+    "building_watchtower": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.8,
+      "anims": {
+        "static": {
+          "start_frame": 1,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 2.4817,
+      "render_scale": 2,
+      "footprint": [
+        1,
+        1
+      ],
+      "render_3d": true,
+      "model_file": "models/building_watchtower_t1.glb",
+      "model_target_size": 1.2
+    },
+    "building_barricade": {
+      "sheet_id": 900,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7215,
+      "ortho_scale": 3.6339,
+      "anims": {
+        "static": {
+          "start_frame": 2,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8,
+      "footprint": [
+        1,
+        1
+      ],
+      "render_3d": true,
+      "model_file": "models/building_barricade.glb",
+      "model_target_size": 1
+    },
+    "building_sandbag": {
+      "sheet_id": 900,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7147,
+      "ortho_scale": 4.1656,
+      "anims": {
+        "static": {
+          "start_frame": 3,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8,
+      "footprint": [
+        1,
+        1
+      ],
+      "render_3d": true,
+      "model_file": "models/building_sandbag.glb",
+      "model_target_size": 1
+    },
+    "building_lumberyard": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.8711,
+      "anims": {
+        "static": {
+          "start_frame": 7,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 2.9696,
+      "model_target_size": 2.75,
+      "render_scale": 0.7424,
+      "footprint": [
+        3,
+        2
+      ],
+      "render_3d": true,
+      "model_file": "models/building_lumberyard.glb"
+    },
+    "prop_tree_oak": {
+      "sheet_id": 901,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.7946,
+      "anims": {
+        "static": {
+          "start_frame": 1,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "impostor": {
+        "atlas": "impostors/prop_tree_oak_impostor.webp",
+        "normal_atlas": "impostors/prop_tree_oak_impostor_n.webp",
+        "world_width": 3.06,
+        "world_height": 5.7224,
+        "vertical_center_offset": 1.7548,
+        "yaw_rects": [
+          {
+            "yaw_deg": 0,
+            "u0": 0,
+            "v0": 0,
+            "u1": 0.125,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 45,
+            "u0": 0.125,
+            "v0": 0,
+            "u1": 0.25,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 90,
+            "u0": 0.25,
+            "v0": 0,
+            "u1": 0.375,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 135,
+            "u0": 0.375,
+            "v0": 0,
+            "u1": 0.5,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 180,
+            "u0": 0.5,
+            "v0": 0,
+            "u1": 0.625,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 225,
+            "u0": 0.625,
+            "v0": 0,
+            "u1": 0.75,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 270,
+            "u0": 0.75,
+            "v0": 0,
+            "u1": 0.875,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 315,
+            "u0": 0.875,
+            "v0": 0,
+            "u1": 1,
+            "v1": 1
+          }
+        ]
+      },
+      "ortho_scale": 15.1823,
+      "render_scale": 2,
+      "footprint": [
+        1,
+        1
+      ],
+      "render_3d": true,
+      "model_file": "models/prop_tree_oak.glb",
+      "model_target_size": 3
+    },
+    "prop_tree_oak_01": {
+      "sheet_id": 67,
+      "cell_w": 512,
+      "cell_h": 512,
+      "render_scale": 2,
+      "ground_y": 0.7946,
+      "footprint": [
+        1,
+        1
+      ],
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_3d": true,
+      "model_file": "models/prop_tree_oak_01.glb",
+      "model_target_size": 3,
+      "impostor": {
+        "atlas": "impostors/prop_tree_oak_01_impostor.webp",
+        "normal_atlas": "impostors/prop_tree_oak_01_impostor_n.webp",
+        "world_width": 3.06,
+        "world_height": 7.9368,
+        "vertical_center_offset": 2.8403,
+        "yaw_rects": [
+          {
+            "yaw_deg": 0,
+            "u0": 0,
+            "v0": 0,
+            "u1": 0.125,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 45,
+            "u0": 0.125,
+            "v0": 0,
+            "u1": 0.25,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 90,
+            "u0": 0.25,
+            "v0": 0,
+            "u1": 0.375,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 135,
+            "u0": 0.375,
+            "v0": 0,
+            "u1": 0.5,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 180,
+            "u0": 0.5,
+            "v0": 0,
+            "u1": 0.625,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 225,
+            "u0": 0.625,
+            "v0": 0,
+            "u1": 0.75,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 270,
+            "u0": 0.75,
+            "v0": 0,
+            "u1": 0.875,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 315,
+            "u0": 0.875,
+            "v0": 0,
+            "u1": 1,
+            "v1": 1
+          }
+        ]
+      }
+    },
+    "prop_tree_oak_02": {
+      "sheet_id": 67,
+      "cell_w": 512,
+      "cell_h": 512,
+      "render_scale": 2,
+      "ground_y": 0.7946,
+      "footprint": [
+        1,
+        1
+      ],
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_3d": true,
+      "model_file": "models/prop_tree_oak_02.glb",
+      "model_target_size": 6,
+      "impostor": {
+        "atlas": "impostors/prop_tree_oak_02_impostor.webp",
+        "normal_atlas": "impostors/prop_tree_oak_02_impostor_n.webp",
+        "world_width": 6.12,
+        "world_height": 10.6143,
+        "vertical_center_offset": 3.1025,
+        "yaw_rects": [
+          {
+            "yaw_deg": 0,
+            "u0": 0,
+            "v0": 0,
+            "u1": 0.125,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 45,
+            "u0": 0.125,
+            "v0": 0,
+            "u1": 0.25,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 90,
+            "u0": 0.25,
+            "v0": 0,
+            "u1": 0.375,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 135,
+            "u0": 0.375,
+            "v0": 0,
+            "u1": 0.5,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 180,
+            "u0": 0.5,
+            "v0": 0,
+            "u1": 0.625,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 225,
+            "u0": 0.625,
+            "v0": 0,
+            "u1": 0.75,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 270,
+            "u0": 0.75,
+            "v0": 0,
+            "u1": 0.875,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 315,
+            "u0": 0.875,
+            "v0": 0,
+            "u1": 1,
+            "v1": 1
+          }
+        ]
+      }
+    },
+    "prop_tree_oak_03": {
+      "sheet_id": 67,
+      "cell_w": 512,
+      "cell_h": 512,
+      "render_scale": 2,
+      "ground_y": 0.7946,
+      "footprint": [
+        1,
+        1
+      ],
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_3d": true,
+      "model_file": "models/prop_tree_oak_03.glb",
+      "model_target_size": 4,
+      "impostor": {
+        "atlas": "impostors/prop_tree_oak_03_impostor.webp",
+        "normal_atlas": "impostors/prop_tree_oak_03_impostor_n.webp",
+        "world_width": 4.08,
+        "world_height": 6.7837,
+        "vertical_center_offset": 1.9249,
+        "yaw_rects": [
+          {
+            "yaw_deg": 0,
+            "u0": 0,
+            "v0": 0,
+            "u1": 0.125,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 45,
+            "u0": 0.125,
+            "v0": 0,
+            "u1": 0.25,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 90,
+            "u0": 0.25,
+            "v0": 0,
+            "u1": 0.375,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 135,
+            "u0": 0.375,
+            "v0": 0,
+            "u1": 0.5,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 180,
+            "u0": 0.5,
+            "v0": 0,
+            "u1": 0.625,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 225,
+            "u0": 0.625,
+            "v0": 0,
+            "u1": 0.75,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 270,
+            "u0": 0.75,
+            "v0": 0,
+            "u1": 0.875,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 315,
+            "u0": 0.875,
+            "v0": 0,
+            "u1": 1,
+            "v1": 1
+          }
+        ]
+      }
+    },
+    "zombie_walker": {
+      "sheet_id": 28,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7628,
+      "ortho_scale": 2.8464,
+      "anims": {
+        "idle_s": {
+          "start_frame": 0,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_sw": {
+          "start_frame": 20,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_w": {
+          "start_frame": 40,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_nw": {
+          "start_frame": 60,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_n": {
+          "start_frame": 80,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_ne": {
+          "start_frame": 100,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_e": {
+          "start_frame": 120,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_se": {
+          "start_frame": 140,
+          "frame_count": 20,
+          "speed": 5,
+          "looping": true
+        },
+        "attack_s": {
+          "start_frame": 160,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_sw": {
+          "start_frame": 198,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_w": {
+          "start_frame": 236,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_nw": {
+          "start_frame": 274,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_n": {
+          "start_frame": 312,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_ne": {
+          "start_frame": 350,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_e": {
+          "start_frame": 388,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_se": {
+          "start_frame": 426,
+          "frame_count": 38,
+          "speed": 10,
+          "looping": false
+        },
+        "walking_s": {
+          "start_frame": 464,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_sw": {
+          "start_frame": 495,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_w": {
+          "start_frame": 526,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_nw": {
+          "start_frame": 557,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_n": {
+          "start_frame": 588,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_ne": {
+          "start_frame": 619,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_e": {
+          "start_frame": 650,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_se": {
+          "start_frame": 681,
+          "frame_count": 31,
+          "speed": 15,
+          "looping": true
+        },
+        "running_s": {
+          "start_frame": 712,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_sw": {
+          "start_frame": 726,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_w": {
+          "start_frame": 740,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_nw": {
+          "start_frame": 754,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_n": {
+          "start_frame": 768,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_ne": {
+          "start_frame": 782,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_e": {
+          "start_frame": 796,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        },
+        "running_se": {
+          "start_frame": 810,
+          "frame_count": 14,
+          "speed": 20,
+          "looping": true
+        }
+      },
+      "clip_authored_speeds": {
+        "walking": 0.7296,
+        "running": 2.8652
+      },
+      "clip_stride_curves": {
+        "walking": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333,
+            0.75,
+            0.791667,
+            0.833333,
+            0.875,
+            0.916667,
+            0.958333,
+            1,
+            1.041667,
+            1.083333,
+            1.125,
+            1.166667,
+            1.208333,
+            1.25,
+            1.291667,
+            1.333333,
+            1.375,
+            1.416667,
+            1.458333,
+            1.5,
+            1.541667,
+            1.583333,
+            1.625,
+            1.666667,
+            1.708333,
+            1.75,
+            1.791667,
+            1.833333,
+            1.875,
+            1.916667,
+            1.958333,
+            2,
+            2.041667,
+            2.083333,
+            2.125
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.036825,
+            0.103899,
+            0.186858,
+            0.272277,
+            0.33639,
+            0.382374,
+            0.410837,
+            0.426516,
+            0.435325,
+            0.439487,
+            0.442438,
+            0.45202,
+            0.474373,
+            0.508037,
+            0.544519,
+            0.572372,
+            0.595739,
+            0.618408,
+            0.642138,
+            0.666687,
+            0.693754,
+            0.726393,
+            0.762268,
+            0.80277,
+            0.847911,
+            0.895676,
+            0.941249,
+            0.981455,
+            1.019266,
+            1.052695,
+            1.077832,
+            1.096156,
+            1.10505,
+            1.108741,
+            1.109391,
+            1.110935,
+            1.11793,
+            1.133111,
+            1.159572,
+            1.189435,
+            1.218931,
+            1.248972,
+            1.275217,
+            1.29921,
+            1.323326,
+            1.349917,
+            1.379879,
+            1.413441,
+            1.451152,
+            1.49681,
+            1.550468
+          ],
+          "duration": 2.125
+        },
+        "running": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.086681,
+            0.228818,
+            0.366953,
+            0.503195,
+            0.627066,
+            0.731088,
+            0.84175,
+            0.957386,
+            1.082851,
+            1.212131,
+            1.340404,
+            1.469645,
+            1.595183,
+            1.70193,
+            1.804073,
+            1.91205,
+            2.029504
+          ],
+          "duration": 0.708333
+        }
+      },
+      "model_natural_size_m": 1.69436,
+      "model_target_size": 0.8,
+      "render_scale": 0.7116,
+      "death_entity": "zombie_walker_death",
+      "movement_mode": "root_motion",
+      "clip_speeds": {
+        "walking": 0.77,
+        "running": 3
+      },
+      "use_true_root_motion": true
+    },
+    "hunter": {
+      "sheet_id": 24,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7947,
+      "ortho_scale": 2.5766,
+      "anims": {
+        "idle_s": {
+          "start_frame": 0,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_sw": {
+          "start_frame": 15,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_w": {
+          "start_frame": 30,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_nw": {
+          "start_frame": 45,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_n": {
+          "start_frame": 60,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_ne": {
+          "start_frame": 75,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_e": {
+          "start_frame": 90,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_se": {
+          "start_frame": 105,
+          "frame_count": 15,
+          "speed": 5,
+          "looping": true
+        },
+        "attack_s": {
+          "start_frame": 120,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_sw": {
+          "start_frame": 133,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_w": {
+          "start_frame": 146,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_nw": {
+          "start_frame": 159,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_n": {
+          "start_frame": 172,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_ne": {
+          "start_frame": 185,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_e": {
+          "start_frame": 198,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "attack_se": {
+          "start_frame": 211,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": false
+        },
+        "slow_walking_s": {
+          "start_frame": 0,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_sw": {
+          "start_frame": 17,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_w": {
+          "start_frame": 34,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_nw": {
+          "start_frame": 51,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_n": {
+          "start_frame": 68,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_ne": {
+          "start_frame": 85,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_e": {
+          "start_frame": 102,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "slow_walking_se": {
+          "start_frame": 119,
+          "frame_count": 17,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_s": {
+          "start_frame": 136,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_sw": {
+          "start_frame": 151,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_w": {
+          "start_frame": 166,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_nw": {
+          "start_frame": 181,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_n": {
+          "start_frame": 196,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_ne": {
+          "start_frame": 211,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_e": {
+          "start_frame": 226,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "walking_se": {
+          "start_frame": 241,
+          "frame_count": 15,
+          "speed": 15,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_s": {
+          "start_frame": 256,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_sw": {
+          "start_frame": 271,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_w": {
+          "start_frame": 286,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_nw": {
+          "start_frame": 301,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_n": {
+          "start_frame": 316,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_ne": {
+          "start_frame": 331,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_e": {
+          "start_frame": 346,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "fast_run_se": {
+          "start_frame": 361,
+          "frame_count": 15,
+          "speed": 30,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_s": {
+          "start_frame": 376,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_sw": {
+          "start_frame": 392,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_w": {
+          "start_frame": 408,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_nw": {
+          "start_frame": 424,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_n": {
+          "start_frame": 440,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_ne": {
+          "start_frame": 456,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_e": {
+          "start_frame": 472,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        },
+        "running_se": {
+          "start_frame": 488,
+          "frame_count": 16,
+          "speed": 20,
+          "looping": true,
+          "sheet_id": 84
+        }
+      },
+      "clip_authored_speeds": {
+        "slow_walking": 1.0448,
+        "walking": 1.6136,
+        "fast_run": 5.104,
+        "running": 2.3347
+      },
+      "clip_stride_curves": {
+        "slow_walking": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333,
+            0.75,
+            0.791667,
+            0.833333,
+            0.875,
+            0.916667,
+            0.958333,
+            1,
+            1.041667,
+            1.083333,
+            1.125,
+            1.166667
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.021443,
+            0.059414,
+            0.100343,
+            0.145684,
+            0.195427,
+            0.246923,
+            0.302721,
+            0.361038,
+            0.416843,
+            0.474116,
+            0.52817,
+            0.578304,
+            0.624199,
+            0.666454,
+            0.704792,
+            0.742795,
+            0.780129,
+            0.818984,
+            0.859862,
+            0.902436,
+            0.945334,
+            0.988385,
+            1.031004,
+            1.070727,
+            1.108612,
+            1.147109,
+            1.183587,
+            1.218888
+          ],
+          "duration": 1.166667
+        },
+        "walking": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333,
+            0.75,
+            0.791667,
+            0.833333,
+            0.875,
+            0.916667,
+            0.958333,
+            1
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.038674,
+            0.103016,
+            0.169521,
+            0.235026,
+            0.300689,
+            0.370656,
+            0.448306,
+            0.524569,
+            0.596371,
+            0.664468,
+            0.731678,
+            0.797639,
+            0.860256,
+            0.921733,
+            0.986988,
+            1.053879,
+            1.121397,
+            1.190063,
+            1.262996,
+            1.336368,
+            1.406879,
+            1.474967,
+            1.544557,
+            1.613591
+          ],
+          "duration": 1
+        },
+        "fast_run": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.118597,
+            0.3185,
+            0.54445,
+            0.778032,
+            0.99488,
+            1.193246,
+            1.399159,
+            1.613441,
+            1.852352,
+            2.096446,
+            2.331068,
+            2.551995
+          ],
+          "duration": 0.5
+        },
+        "running": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333,
+            0.75,
+            0.791667,
+            0.833333
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.048996,
+            0.134125,
+            0.228463,
+            0.333909,
+            0.439661,
+            0.536049,
+            0.633394,
+            0.721455,
+            0.807703,
+            0.89634,
+            0.988564,
+            1.08719,
+            1.199808,
+            1.312188,
+            1.422945,
+            1.532885,
+            1.636565,
+            1.73392,
+            1.836836,
+            1.945581
+          ],
+          "duration": 0.833333
+        }
+      },
+      "model_natural_size_m": 1.559131,
+      "model_target_size": 0.512,
+      "render_scale": 0.704,
+      "death_entity": "hunter_death",
+      "movement_mode": "root_motion",
+      "use_true_root_motion": true,
+      "clip_speeds": {
+        "walking": 3.5,
+        "running": 3.5
+      }
+    },
+    "weapon_bow": {
+      "sheet_id": 80,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.5078,
+      "anims": {
+        "idle_s": {
+          "start_frame": 0,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_sw": {
+          "start_frame": 18,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_w": {
+          "start_frame": 36,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_nw": {
+          "start_frame": 54,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_n": {
+          "start_frame": 72,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_ne": {
+          "start_frame": 90,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_e": {
+          "start_frame": 108,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "idle_se": {
+          "start_frame": 126,
+          "frame_count": 18,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_s": {
+          "start_frame": 144,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_sw": {
+          "start_frame": 154,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_w": {
+          "start_frame": 164,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_nw": {
+          "start_frame": 174,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_n": {
+          "start_frame": 184,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_ne": {
+          "start_frame": 194,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_e": {
+          "start_frame": 204,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "walking_se": {
+          "start_frame": 214,
+          "frame_count": 10,
+          "speed": 10,
+          "looping": true
+        },
+        "running_s": {
+          "start_frame": 224,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_sw": {
+          "start_frame": 230,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_w": {
+          "start_frame": 236,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_nw": {
+          "start_frame": 242,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_n": {
+          "start_frame": 248,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_ne": {
+          "start_frame": 254,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_e": {
+          "start_frame": 260,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "running_se": {
+          "start_frame": 266,
+          "frame_count": 6,
+          "speed": 10,
+          "looping": true
+        },
+        "attack_s": {
+          "start_frame": 272,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_sw": {
+          "start_frame": 279,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_w": {
+          "start_frame": 286,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_nw": {
+          "start_frame": 293,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_n": {
+          "start_frame": 300,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_ne": {
+          "start_frame": 307,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_e": {
+          "start_frame": 314,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_se": {
+          "start_frame": 321,
+          "frame_count": 7,
+          "speed": 10,
+          "looping": false
+        },
+        "death_s": {
+          "start_frame": 328,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_sw": {
+          "start_frame": 350,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_w": {
+          "start_frame": 372,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_nw": {
+          "start_frame": 394,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_n": {
+          "start_frame": 416,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_ne": {
+          "start_frame": 438,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_e": {
+          "start_frame": 460,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_se": {
+          "start_frame": 482,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        }
+      },
+      "render_scale": 1,
+      "ground_y_overrides": {
+        "idle_s": 0.543,
+        "idle_sw": 0.5156,
+        "idle_w": 0.4375,
+        "idle_nw": 0.4609,
+        "idle_n": 0.4688,
+        "idle_ne": 0.4492,
+        "idle_e": 0.4414,
+        "idle_se": 0.5039,
+        "walking_s": 0.5742,
+        "walking_sw": 0.582,
+        "walking_w": 0.5313,
+        "walking_nw": 0.5547,
+        "walking_n": 0.5313,
+        "walking_ne": 0.4766,
+        "walking_e": 0.4414,
+        "walking_se": 0.4922,
+        "running_s": 0.543,
+        "running_sw": 0.5703,
+        "running_w": 0.5273,
+        "running_nw": 0.5469,
+        "running_n": 0.5078,
+        "running_ne": 0.4258,
+        "running_e": 0.3906,
+        "running_se": 0.4414,
+        "attack_s": 0.3633,
+        "attack_sw": 0.3906,
+        "attack_w": 0.3711,
+        "attack_nw": 0.418,
+        "attack_n": 0.3984,
+        "attack_ne": 0.3086,
+        "attack_e": 0.2578,
+        "attack_se": 0.3008,
+        "death_s": 0.5469,
+        "death_sw": 0.543,
+        "death_w": 0.4727,
+        "death_nw": 0.4805,
+        "death_n": 0.4648,
+        "death_ne": 0.4258,
+        "death_e": 0.4063,
+        "death_se": 0.4688
+      }
+    },
+    "arrow": {
+      "sheet_id": 71,
+      "cell_w": 64,
+      "cell_h": 64,
+      "ground_y": 0.5896,
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 2.4946,
+      "render_scale": 0.25
+    },
+    "prop_rubble": {
+      "sheet_id": 901,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.5936,
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 14.3347,
+      "render_scale": 0.8,
+      "footprint": [
+        3,
+        3
+      ],
+      "render_3d": true,
+      "model_file": "models/prop_rubble.glb",
+      "model_target_size": 3
+    },
+    "prop_big_garbage": {
+      "sheet_id": 80,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.5469,
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8,
+      "render_3d": true,
+      "model_file": "models/prop_big_garbage.glb",
+      "model_target_size": 1
+    },
+    "militia": {
+      "sheet_id": 72,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.808,
+      "ortho_scale": 2.4092,
+      "anims": {
+        "idle_s": {
+          "start_frame": 0,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_sw": {
+          "start_frame": 38,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_w": {
+          "start_frame": 76,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_nw": {
+          "start_frame": 114,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_n": {
+          "start_frame": 152,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_ne": {
+          "start_frame": 190,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_e": {
+          "start_frame": 228,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "idle_se": {
+          "start_frame": 266,
+          "frame_count": 38,
+          "speed": 5,
+          "looping": true
+        },
+        "walking_s": {
+          "start_frame": 304,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_sw": {
+          "start_frame": 323,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_w": {
+          "start_frame": 342,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_nw": {
+          "start_frame": 361,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_n": {
+          "start_frame": 380,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_ne": {
+          "start_frame": 399,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_e": {
+          "start_frame": 418,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "walking_se": {
+          "start_frame": 437,
+          "frame_count": 19,
+          "speed": 15,
+          "looping": true
+        },
+        "running_s": {
+          "start_frame": 456,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_sw": {
+          "start_frame": 469,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_w": {
+          "start_frame": 482,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_nw": {
+          "start_frame": 495,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_n": {
+          "start_frame": 508,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_ne": {
+          "start_frame": 521,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_e": {
+          "start_frame": 534,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "running_se": {
+          "start_frame": 547,
+          "frame_count": 13,
+          "speed": 20,
+          "looping": true
+        },
+        "attack_s": {
+          "start_frame": 560,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_sw": {
+          "start_frame": 585,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_w": {
+          "start_frame": 610,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_nw": {
+          "start_frame": 635,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_n": {
+          "start_frame": 660,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_ne": {
+          "start_frame": 685,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_e": {
+          "start_frame": 710,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        },
+        "attack_se": {
+          "start_frame": 735,
+          "frame_count": 25,
+          "speed": 10,
+          "looping": false
+        }
+      },
+      "clip_authored_speeds": {
+        "walking": 1.0404,
+        "running": 3.7162
+      },
+      "clip_stride_curves": {
+        "walking": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667,
+            0.708333,
+            0.75,
+            0.791667,
+            0.833333,
+            0.875,
+            0.916667,
+            0.958333,
+            1,
+            1.041667,
+            1.083333,
+            1.125,
+            1.166667,
+            1.208333,
+            1.25,
+            1.291667
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.022694,
+            0.060741,
+            0.100194,
+            0.142159,
+            0.187225,
+            0.233669,
+            0.280672,
+            0.328085,
+            0.376083,
+            0.424257,
+            0.46955,
+            0.512597,
+            0.554072,
+            0.594612,
+            0.634503,
+            0.672964,
+            0.711608,
+            0.750835,
+            0.791956,
+            0.835809,
+            0.883047,
+            0.930552,
+            0.97894,
+            1.028338,
+            1.077958,
+            1.12611,
+            1.173118,
+            1.219238,
+            1.263606,
+            1.305347,
+            1.343817
+          ],
+          "duration": 1.291667
+        },
+        "running": {
+          "times": [
+            0,
+            0.041667,
+            0.083333,
+            0.125,
+            0.166667,
+            0.208333,
+            0.25,
+            0.291667,
+            0.333333,
+            0.375,
+            0.416667,
+            0.458333,
+            0.5,
+            0.541667,
+            0.583333,
+            0.625,
+            0.666667
+          ],
+          "cum_forward_tiles": [
+            0,
+            0.089005,
+            0.2392,
+            0.396764,
+            0.557034,
+            0.705874,
+            0.848582,
+            0.995257,
+            1.147338,
+            1.302976,
+            1.463911,
+            1.630601,
+            1.800625,
+            1.971696,
+            2.142401,
+            2.311738,
+            2.477435
+          ],
+          "duration": 0.666667
+        }
+      },
+      "model_natural_size_m": 1.298461,
+      "render_scale": 0.6023,
+      "death_entity": "militia_death",
+      "movement_mode": "root_motion",
+      "clip_speeds": {
+        "walking": 3,
+        "running": 3
+      },
+      "use_true_root_motion": true
+    },
+    "unit_shack": {
+      "sheet_id": 73,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.8,
+      "emitters": [
+        {
+          "name": "smoke",
+          "offset_x": -0.4178,
+          "offset_y": 0.0435,
+          "elevation": 1.475
+        }
+      ],
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 9.4182,
+      "render_scale": 2,
+      "footprint": [
+        2,
+        2
+      ],
+      "render_3d": true,
+      "model_file": "models/unit_shack.glb",
+      "model_target_size": 2
+    },
+    "building_windmill": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.8,
+      "anims": {
+        "static": {
+          "start_frame": 9,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 28.8201,
+      "render_scale": 2,
+      "footprint": [
+        2,
+        2
+      ],
+      "render_3d": true,
+      "model_file": "models/windmill.glb",
+      "model_target_size": 2,
+      "anchors": [
+        {
+          "anchor_name": "blade",
+          "model_key": "windmill_blades",
+          "model_file": "models/windmill_blades.glb",
+          "spin_axis": "z",
+          "scale": 5,
+          "base_rotation": 90
+        }
+      ]
+    },
+    "zombie_screamer": {
+      "sheet_id": 32,
+      "cell_w": 256,
+      "cell_h": 256,
+      "anims": {},
+      "render_3d": true,
+      "model_file": "models/zombie_screamer/idle.glb",
+      "model_target_size": 1,
+      "model_animations": {
+        "idle": "models/zombie_screamer/idle.glb",
+        "walking": "models/zombie_screamer/walking.glb",
+        "running": "models/zombie_screamer/running.glb",
+        "attack": "models/zombie_screamer/attack.glb",
+        "death": "models/zombie_screamer/death.glb"
+      },
+      "model_scale": 1,
+      "model_turn_speed": 10,
+      "ai_turn_speed": 4,
+      "movement_mode": "root_motion",
+      "clip_speeds": {
+        "walking": 2,
+        "running": 3.5
+      },
+      "use_true_root_motion": true
+    },
+    "worker_death": {
+      "sheet_id": 75,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7179,
+      "ortho_scale": 3.3622,
+      "anims": {
+        "death_s": {
+          "start_frame": 0,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_sw": {
+          "start_frame": 36,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_w": {
+          "start_frame": 72,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_nw": {
+          "start_frame": 108,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_n": {
+          "start_frame": 144,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_ne": {
+          "start_frame": 180,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_e": {
+          "start_frame": 216,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        },
+        "death_se": {
+          "start_frame": 252,
+          "frame_count": 36,
+          "speed": 10,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8406
+    },
+    "building_house": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.7593,
+      "anims": {
+        "static": {
+          "start_frame": 4,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 25.8714,
+      "render_scale": 2,
+      "footprint": [
+        3,
+        3
+      ],
+      "render_3d": true,
+      "model_file": "models/building_house.glb",
+      "model_target_size": 3
+    },
+    "building_farm": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.7497,
+      "ortho_scale": 19.6988,
+      "anims": {
+        "static": {
+          "start_frame": 5,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 2.5,
+      "footprint": [
+        3,
+        3
+      ],
+      "render_3d": true,
+      "model_file": "models/building_farm.glb",
+      "model_target_size": 3
+    },
+    "building_petrolstation": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.633,
+      "ortho_scale": 2.7641,
+      "anims": {
+        "static": {
+          "start_frame": 8,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 4,
+      "footprint": [
+        6,
+        4
+      ],
+      "render_3d": true,
+      "model_file": "models/building_petrolstation.glb",
+      "model_target_size": 5
+    },
+    "prop_rocks": {
+      "sheet_id": 901,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.6563,
+      "anims": {
+        "static": {
+          "start_frame": 3,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "ortho_scale": 2.8967,
+      "render_scale": 0.8,
+      "footprint": [
+        4,
+        4
+      ],
+      "render_3d": true,
+      "model_file": "models/prop_rocks.glb",
+      "model_target_size": 4
+    },
+    "prop_bush": {
+      "sheet_id": 901,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7703,
+      "anims": {
+        "static": {
+          "start_frame": 2,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "impostor": {
+        "atlas": "impostors/prop_bush_impostor.webp",
+        "normal_atlas": "impostors/prop_bush_impostor_n.webp",
+        "world_width": 1.53,
+        "world_height": 2.6401,
+        "vertical_center_offset": 0.769,
+        "yaw_rects": [
+          {
+            "yaw_deg": 0,
+            "u0": 0,
+            "v0": 0,
+            "u1": 0.125,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 45,
+            "u0": 0.125,
+            "v0": 0,
+            "u1": 0.25,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 90,
+            "u0": 0.25,
+            "v0": 0,
+            "u1": 0.375,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 135,
+            "u0": 0.375,
+            "v0": 0,
+            "u1": 0.5,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 180,
+            "u0": 0.5,
+            "v0": 0,
+            "u1": 0.625,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 225,
+            "u0": 0.625,
+            "v0": 0,
+            "u1": 0.75,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 270,
+            "u0": 0.75,
+            "v0": 0,
+            "u1": 0.875,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 315,
+            "u0": 0.875,
+            "v0": 0,
+            "u1": 1,
+            "v1": 1
+          }
+        ]
+      },
+      "ortho_scale": 107.7557,
+      "render_scale": 0.8,
+      "footprint": [
+        1,
+        1
+      ],
+      "render_3d": true,
+      "model_file": "models/prop_bush.glb",
+      "model_target_size": 1.5
+    },
+    "hunter_death": {
+      "sheet_id": 76,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.6934,
+      "ortho_scale": 3.2672,
+      "anims": {
+        "death_s": {
+          "start_frame": 0,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_sw": {
+          "start_frame": 61,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_w": {
+          "start_frame": 122,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_nw": {
+          "start_frame": 183,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_n": {
+          "start_frame": 244,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_ne": {
+          "start_frame": 305,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_e": {
+          "start_frame": 366,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        },
+        "death_se": {
+          "start_frame": 427,
+          "frame_count": 61,
+          "speed": 20,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8168
+    },
+    "zombie_walker_death": {
+      "sheet_id": 77,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.6564,
+      "ortho_scale": 4.0003,
+      "anims": {
+        "death_s": {
+          "start_frame": 0,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_sw": {
+          "start_frame": 22,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_w": {
+          "start_frame": 44,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_nw": {
+          "start_frame": 66,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_n": {
+          "start_frame": 88,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_ne": {
+          "start_frame": 110,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_e": {
+          "start_frame": 132,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        },
+        "death_se": {
+          "start_frame": 154,
+          "frame_count": 22,
+          "speed": 10,
+          "looping": false
+        }
+      },
+      "render_scale": 1.0001
+    },
+    "militia_death": {
+      "sheet_id": 79,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.7302,
+      "ortho_scale": 3.0239,
+      "anims": {
+        "death_s": {
+          "start_frame": 0,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_sw": {
+          "start_frame": 30,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_w": {
+          "start_frame": 60,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_nw": {
+          "start_frame": 90,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_n": {
+          "start_frame": 120,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_ne": {
+          "start_frame": 150,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_e": {
+          "start_frame": 180,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        },
+        "death_se": {
+          "start_frame": 210,
+          "frame_count": 30,
+          "speed": 10,
+          "looping": false
+        }
+      },
+      "render_scale": 0.756
+    },
+    "prop_rocks_big": {
+      "sheet_id": 901,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.6563,
+      "ortho_scale": 2.8967,
+      "anims": {
+        "static": {
+          "start_frame": 4,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8,
+      "footprint": [
+        6,
+        6
+      ],
+      "render_3d": true,
+      "model_file": "models/prop_rocks.glb",
+      "model_target_size": 6
+    },
+    "zombie_brute": {
+      "sheet_id": 30,
+      "cell_w": 256,
+      "cell_h": 256,
+      "anims": {},
+      "render_3d": true,
+      "model_file": "models/zombie_brute/idle.glb",
+      "model_target_size": 1.2,
+      "model_animations": {
+        "idle": "models/zombie_brute/idle.glb",
+        "walking": "models/zombie_brute/walking.glb",
+        "running": "models/zombie_brute/running.glb",
+        "slow_walking": "models/zombie_brute/slow_walking.glb",
+        "attack": "models/zombie_brute/attack.glb",
+        "death": "models/zombie_brute/death.glb"
+      },
+      "model_scale": 2.5,
+      "model_turn_speed": 8,
+      "ai_turn_speed": 3,
+      "movement_mode": "root_motion",
+      "clip_speeds": {
+        "slow_walking": 0.4,
+        "walking": 1.4,
+        "running": 2.5
+      },
+      "use_true_root_motion": true
+    },
+    "building_garage": {
+      "sheet_id": 900,
+      "cell_w": 256,
+      "cell_h": 256,
+      "anims": {
+        "static": {
+          "start_frame": 2,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 2.5,
+      "footprint": [
+        2,
+        2
+      ],
+      "ground_y": 0.9453
+    },
+    "prop_wreck_pile": {
+      "sheet_id": 901,
+      "cell_w": 256,
+      "cell_h": 256,
+      "ground_y": 0.6184,
+      "ortho_scale": 56.6545,
+      "anims": {
+        "static": {
+          "start_frame": 5,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_scale": 0.8,
+      "footprint": [
+        3,
+        3
+      ],
+      "render_3d": true,
+      "model_file": "models/prop_wreck_pile.glb",
+      "model_target_size": 3
+    },
+    "zombie_runner": {
+      "sheet_id": 29,
+      "cell_w": 256,
+      "cell_h": 256,
+      "anims": {},
+      "render_3d": true,
+      "model_file": "models/zombie_runner/idle.glb",
+      "model_target_size": 1,
+      "model_animations": {
+        "idle": "models/zombie_runner/idle.glb",
+        "walking": "models/zombie_runner/walking.glb",
+        "running": "models/zombie_runner/running.glb",
+        "attack": "models/zombie_runner/attack.glb",
+        "death": "models/zombie_runner/death.glb"
+      },
+      "model_scale": 1,
+      "model_turn_speed": 10,
+      "ai_turn_speed": 4,
+      "movement_mode": "root_motion",
+      "clip_speeds": {
+        "walking": 1.5,
+        "running": 3
+      },
+      "use_true_root_motion": true
+    },
+    "building_barracks": {
+      "sheet_id": 900,
+      "cell_w": 512,
+      "cell_h": 512,
+      "ground_y": 0.9023,
+      "ortho_scale": 2.8417,
+      "anims": {
+        "static": {
+          "start_frame": 1,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "model_target_size": 3,
+      "render_scale": 2.5,
+      "footprint": [
+        3,
+        3
+      ],
+      "render_3d": true,
+      "model_file": "models/building_barracks.glb"
+    },
+    "prop_tree_oak_04": {
+      "sheet_id": 67,
+      "cell_w": 512,
+      "cell_h": 512,
+      "render_scale": 2,
+      "ground_y": 0.7946,
+      "footprint": [
+        1,
+        1
+      ],
+      "anims": {
+        "static": {
+          "start_frame": 0,
+          "frame_count": 1,
+          "speed": 1,
+          "looping": false
+        }
+      },
+      "render_3d": true,
+      "model_file": "models/prop_tree_oak_04.glb",
+      "model_target_size": 4,
+      "impostor": {
+        "atlas": "impostors/prop_tree_oak_04_impostor.webp",
+        "normal_atlas": "impostors/prop_tree_oak_04_impostor_n.webp",
+        "world_width": 4.08,
+        "world_height": 6.6354,
+        "vertical_center_offset": 1.8522,
+        "yaw_rects": [
+          {
+            "yaw_deg": 0,
+            "u0": 0,
+            "v0": 0,
+            "u1": 0.125,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 45,
+            "u0": 0.125,
+            "v0": 0,
+            "u1": 0.25,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 90,
+            "u0": 0.25,
+            "v0": 0,
+            "u1": 0.375,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 135,
+            "u0": 0.375,
+            "v0": 0,
+            "u1": 0.5,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 180,
+            "u0": 0.5,
+            "v0": 0,
+            "u1": 0.625,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 225,
+            "u0": 0.625,
+            "v0": 0,
+            "u1": 0.75,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 270,
+            "u0": 0.75,
+            "v0": 0,
+            "u1": 0.875,
+            "v1": 1
+          },
+          {
+            "yaw_deg": 315,
+            "u0": 0.875,
+            "v0": 0,
+            "u1": 1,
+            "v1": 1
+          }
+        ]
+      }
+    }
+  }
+}

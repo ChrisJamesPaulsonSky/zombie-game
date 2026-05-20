@@ -1,0 +1,779 @@
+{
+  "buildings": [
+    {
+      "captured": true,
+      "kind": "CommandCentre",
+      "x": 57,
+      "y": 58
+    },
+    {
+      "captured": false,
+      "kind": "Farm",
+      "x": 48,
+      "y": 54
+    },
+    {
+      "captured": false,
+      "kind": "LumberYard",
+      "x": 66,
+      "y": 66
+    },
+    {
+      "captured": false,
+      "kind": "House",
+      "x": 40,
+      "y": 82
+    },
+    {
+      "captured": false,
+      "kind": "House",
+      "x": 58,
+      "y": 88
+    },
+    {
+      "captured": false,
+      "kind": "House",
+      "x": 67,
+      "y": 90
+    }
+  ],
+  "camera": {
+    "x": 57,
+    "y": 58
+  },
+  "elevation_png": "Old Level 1 hillside court_hgt.png",
+  "hedges": [
+    {
+      "waypoints": [
+        [
+          88.5,
+          32
+        ],
+        [
+          88.5,
+          41.5
+        ],
+        [
+          79,
+          41.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          41.5,
+          46.5
+        ],
+        [
+          41.5,
+          50.5
+        ],
+        [
+          32.5,
+          50.5
+        ],
+        [
+          32.5,
+          40.5
+        ],
+        [
+          41.5,
+          40.5
+        ],
+        [
+          41.5,
+          44.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          46,
+          40.5
+        ],
+        [
+          56.5,
+          40.5
+        ],
+        [
+          56.5,
+          42
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          58,
+          41.5
+        ],
+        [
+          66.5,
+          41.5
+        ],
+        [
+          66.5,
+          49.5
+        ],
+        [
+          58,
+          49.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          55.5,
+          52
+        ],
+        [
+          55.5,
+          60.5
+        ],
+        [
+          47,
+          60.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          80,
+          53.5
+        ],
+        [
+          90.5,
+          53.5
+        ],
+        [
+          90.5,
+          63.5
+        ],
+        [
+          80,
+          63.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          44.5,
+          71.5
+        ],
+        [
+          44.5,
+          75.5
+        ],
+        [
+          32.5,
+          75.5
+        ],
+        [
+          32.5,
+          65.5
+        ],
+        [
+          44.5,
+          65.5
+        ],
+        [
+          44.5,
+          69.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          69.5,
+          73.5
+        ],
+        [
+          69.5,
+          69.5
+        ],
+        [
+          80.5,
+          69.5
+        ],
+        [
+          80.5,
+          79.5
+        ],
+        [
+          69.5,
+          79.5
+        ],
+        [
+          69.5,
+          75.5
+        ]
+      ]
+    },
+    {
+      "waypoints": [
+        [
+          46,
+          79.5
+        ],
+        [
+          55.5,
+          79.5
+        ],
+        [
+          55.5,
+          88.5
+        ],
+        [
+          46,
+          88.5
+        ]
+      ]
+    }
+  ],
+  "height": 128,
+  "name": "Hillside Court",
+  "pop_cap": 120,
+  "props": [
+    {
+      "key": "prop_bush",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 69.2,
+      "y": 47.3
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 70.5,
+      "y": 47.8
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 71.8,
+      "y": 47.1
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 73,
+      "y": 48.2
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 69.5,
+      "y": 49
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 70.8,
+      "y": 49.4
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 72.2,
+      "y": 49.8
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 73.3,
+      "y": 49.1
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 69,
+      "y": 50.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 71,
+      "y": 51
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 72.5,
+      "y": 50.3
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 70.2,
+      "y": 51.2
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 40.5,
+      "y": 89.2
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 41.8,
+      "y": 89.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 43,
+      "y": 89.8
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 40.2,
+      "y": 90.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 41.5,
+      "y": 90.8
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 42.8,
+      "y": 91
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 40.8,
+      "y": 91.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 42.2,
+      "y": 91.2
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 43.5,
+      "y": 90.3
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 82.5,
+      "y": 83.2
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 83.8,
+      "y": 83.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 85,
+      "y": 83.8
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 82.2,
+      "y": 84.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 83.5,
+      "y": 84.8
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 84.8,
+      "y": 85
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 82.8,
+      "y": 85.5
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 84.2,
+      "y": 85.2
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 85.5,
+      "y": 84.3
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 47,
+      "y": 62
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 62,
+      "y": 44
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 77,
+      "y": 67
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 62,
+      "y": 77
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 37,
+      "y": 72
+    },
+    {
+      "key": "prop_tree_oak",
+      "x": 90,
+      "y": 57
+    }
+  ],
+  "roads": [
+    {
+      "half_width": 0.45,
+      "waypoints": [
+        [
+          33.5,
+          37.5
+        ],
+        [
+          69.5,
+          37.5
+        ]
+      ]
+    },
+    {
+      "half_width": 0.45,
+      "waypoints": [
+        [
+          57.5,
+          37.5
+        ],
+        [
+          57.5,
+          58.5
+        ]
+      ]
+    },
+    {
+      "half_width": 0.45,
+      "waypoints": [
+        [
+          69.5,
+          32.5
+        ],
+        [
+          70.5,
+          37.5
+        ],
+        [
+          72.5,
+          44.5
+        ],
+        [
+          75.5,
+          52.5
+        ],
+        [
+          78.5,
+          60.5
+        ],
+        [
+          81.5,
+          68.5
+        ],
+        [
+          84.5,
+          76.5
+        ],
+        [
+          87.5,
+          84.5
+        ],
+        [
+          89.5,
+          90.5
+        ],
+        [
+          91.5,
+          95.5
+        ]
+      ]
+    }
+  ],
+  "spawn_zones": [
+    {
+      "counts": {
+        "Walker": 8
+      },
+      "delay": 60,
+      "label": "THE NORTH FIELDS",
+      "radius": 5,
+      "repeat": 1,
+      "x": 92,
+      "y": 42
+    },
+    {
+      "counts": {
+        "Runner": 4,
+        "Walker": 12
+      },
+      "delay": 120,
+      "interval": 120,
+      "label": "THE EAST ROAD",
+      "radius": 5,
+      "repeat": 1,
+      "x": 92,
+      "y": 72
+    },
+    {
+      "counts": {
+        "Runner": 2,
+        "Screamer": 2,
+        "Walker": 10
+      },
+      "delay": 300,
+      "interval": 150,
+      "label": "NETHER BURROWS",
+      "radius": 5,
+      "repeat": 1,
+      "x": 90,
+      "y": 90
+    },
+    {
+      "counts": {
+        "Brute": 1,
+        "Runner": 6,
+        "Screamer": 2,
+        "Walker": 15
+      },
+      "delay": 600,
+      "interval": 200,
+      "label": "OVER BURROWS",
+      "radius": 4,
+      "repeat": 1,
+      "x": 37,
+      "y": 92
+    }
+  ],
+  "terrain_grid": [
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD.....................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD.....................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD.....................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD.....................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD.....................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK......................RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR.....CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD.....................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK..................................................................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK..................................................................CCCCCCCCCCCC..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..............................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC...................KKKKK............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC..........DDDDDDDDDKKKKKK...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC..........DDDDDDDDDKKKKKKK..........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC..........DDDDDDDDDKKKKKKKK.........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC..LLLLLF..DDDDDDDDDKKKKKKKK.........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC..LLLLLLL.DDDDDDDDDKKKKKKKK.........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC..CCCCCCCC..LLLLLLL.DDDDDDDDDKKKKKKKK.........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCC.....CCCCCCCCCC............LLLLLLL.DDDDDDDDDKKKKKKKK.........................KKKKKKKKKK",
+    "KKKKKKKKKK..........................................................LLLLLLL........KKKKKKKKK..........................KKKKKKKKKK",
+    "KKKKKKKKKK..........................................................LLLLLL..........KKKKKKK...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC..............LLLL............KKKKK............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC...............................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC.........................CCCCCCCCCCLL..........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC.........................CCCCCCCCCCLL..........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC.........................CCCCCCCCCCLL..........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC.........................CCCCCCCCCCLL..........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC.........................CCCCCCCCCCLL..........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD...CCCCCCCCC.........................CCCCCCCCCC............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................DDDDDDDDDD.....................................CCCCCCCCCC............................KKKKKKKKKK",
+    "KKKKKKKKKK....................................LLL...............................CCCCCCCCCC............................KKKKKKKKKK",
+    "KKKKKKKKKK....................................LLL...............................CCCCCCCCCC............................KKKKKKKKKK",
+    "KKKKKKKKKK....................................LLL.....................................................................KKKKKKKKKK",
+    "KKKKKKKKKK................................................DDDDDDDD....................................................KKKKKKKKKK",
+    "KKKKKKKKKK................................................DDDDDDDD....................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..............DDDDDDDD..........LLL.......................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...DDDDDDDD..........LLL.......................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...DDDDDDDD..........LLL.......................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...DDDDDDDD................DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...............CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...............CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...............CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCC..DDDDDDDDD...............CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCKKDDDDDDDDD...............CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK.............................KKKKKKK........................CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK............................KKKKKKKKK..............LLL......CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK............................KKKKKKKKK..............LLL......CCCCCCCCCC..DDDDDDDDD...........................KKKKKKKKKK",
+    "KKKKKKKKKK............................KKKKKKKKK..............LLL......CCCCCCCCCC......................................KKKKKKKKKK",
+    "KKKKKKKKKK.............................KKKKKKK........................................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCCKCCCCCCCCC...............................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC...............................................................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC..........................LLLLLLF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC..........................LLLLLLF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC.....KKKKK................LLLLLLF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC....KKKKKKK...............LLLLLLF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC....KKKKKKK...............LLLLLFF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.......................CCCCCCCCCCCC.CCCCCCCCC....KKKKKKK................FFFFFF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.............................LLLLLL.KKK..........KKKKKKK................FFFFFF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.............................LLLLLKKKKKKK........KKKKKKK................FFFFFF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.............................LLLLLKKKKKKK.........KKKKK.................FFFFFF..............................KKKKKKKKKK",
+    "KKKKKKKKKK.............................LLLLKKKKKKKKK..................................................................KKKKKKKKKK",
+    "KKKKKKKKKK.............................LLLLKFKKKKKKK..................................................................KKKKKKKKKK",
+    "KKKKKKKKKK.................................KKKKKKKKK..................................................................KKKKKKKKKK",
+    "KKKKKKKKKK..................................KKKKKKK...................................................................KKKKKKKKKK",
+    "KKKKKKKKKK..................................KKKKKKK...................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKK............................................................................................................KKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+    "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK"
+  ],
+  "units": [
+    {
+      "type": "Worker",
+      "x": 56,
+      "y": 57
+    },
+    {
+      "type": "Worker",
+      "x": 57,
+      "y": 57
+    },
+    {
+      "type": "Worker",
+      "x": 58,
+      "y": 57
+    },
+    {
+      "type": "Militia",
+      "x": 55,
+      "y": 59
+    },
+    {
+      "type": "Militia",
+      "x": 55,
+      "y": 60
+    },
+    {
+      "hero": true,
+      "type": "Hunter",
+      "x": 68,
+      "y": 68
+    },
+    {
+      "type": "Hunter",
+      "x": 58,
+      "y": 69
+    },
+    {
+      "type": "Hunter",
+      "x": 68,
+      "y": 69
+    },
+    {
+      "type": "Soldier",
+      "x": 70,
+      "y": 70
+    },
+    {
+      "type": "Engineer",
+      "x": 56,
+      "y": 61
+    }
+  ],
+  "vehicles": [],
+  "width": 128,
+  "zombies": [
+    {
+      "type": "Screamer",
+      "x": 75,
+      "y": 50
+    },
+    {
+      "type": "Runner",
+      "x": 85,
+      "y": 55
+    },
+    {
+      "type": "Walker",
+      "x": 90,
+      "y": 52
+    },
+    {
+      "type": "Walker",
+      "x": 91,
+      "y": 54
+    },
+    {
+      "type": "Walker",
+      "x": 92,
+      "y": 50
+    },
+    {
+      "type": "Walker",
+      "x": 88,
+      "y": 67
+    },
+    {
+      "type": "Walker",
+      "x": 90,
+      "y": 69
+    }
+  ]
+}
