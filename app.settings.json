@@ -1,0 +1,9 @@
+{
+  "ai_log": {
+    "enabled": true,
+    "sample_interval": 1,
+    "flush_every": 60,
+    "max_frames": 8000,
+    "path": "D:\\tmp\\zt_ai_log.ndjson"
+  }
+}

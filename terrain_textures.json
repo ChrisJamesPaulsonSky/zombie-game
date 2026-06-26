@@ -1,0 +1,170 @@
+{
+  "_comment": "Terrain texture manifest — texture paths and per-texture settings",
+  "settings": {
+    "use_packed_layers": true,
+    "tiles_per_texture_repeat": 8,
+    "_tiles_per_texture_repeat_comment": "How many tiles before grass texture repeats",
+    "uv_y_scale": 0.5,
+    "_uv_y_scale_comment": "V-axis UV multiplier for isometric foreshortening. Ignored in perspective mode (forced to 1.0)",
+    "normal_strength": 1.5,
+    "_normal_strength_comment": "Normal map intensity multiplier. 0 = flat, 1.0 = subtle, 2.0+ = strong",
+    "parallax_strength": 0.05,
+    "_parallax_strength_comment": "Height scale for parallax mapping. 0 = disabled, 0.02-0.08 typical",
+    "specular_strength": 0.05,
+    "_specular_strength_comment": "Intensity of specular highlights (Blinn-Phong). NOTE: lowered from 0.3 after the TICKET-191 linear-lighting pass — specular is now added in linear space then sRGB-encoded, which amplifies the additive highlight against the linearized (darker) albedo base, so the old 0.3 over-sheened the terrain. 0 = matte, ~0.1-0.15 = subtle sheen (current), 0.3+ = glossy/wet (now reads much stronger than pre-linear). Roughness from height map G channel modulates per-texel.",
+    "ao_strength": 1,
+    "_ao_strength_comment": "TICKET-198: strength of the texture-packed material AO (B channel of each layer's _hgt texture). ao = mix(1.0, ao, ao_strength) before the ambient term. 0 = ignore baked material AO (uniform ambient across creases), 1 = authored strength (legacy default, regression-safe), >1 = exaggerate crease/contact darkening. Independent of baked ground AO (baked_ao.strength) and SSAO (ssao.intensity).",
+    "specular_shininess_min": 2,
+    "_specular_shininess_min_comment": "TICKET-191 follow-up: Blinn-Phong shininess at the BROAD (high-roughness) end — controls how many camera/sun angles the highlight spreads across. Shader does mix(min, max, 1-roughness). LOW (8) = wide lobe = sheen shows at many angles (the 'too many angles' look); RAISE (e.g. 32-64) for a tighter, more angle-selective glint that only catches at specific angles.",
+    "specular_shininess_max": 32,
+    "_specular_shininess_max_comment": "TICKET-191 follow-up: Blinn-Phong shininess at the TIGHT (low-roughness/glossy) end. Higher = sharper, smaller mirror-like highlight on the glossiest terrain texels. 256 = sharp; lower toward the min for a more uniform, softer sheen.",
+    "fresnel_strength": 0.05,
+    "_fresnel_strength_comment": "TICKET-090 grazing-angle sky-tint: blends the sky-horizon colour into terrain as it tilts away from the camera. Was defaulting to 0.15 (not previously in this file). THIS is the broad bright 'sheen' on flat grass at shallow angles — NOT the specular. Set 0 to disable (recommended now that the TICKET-191 linear pass already brightens terrain, making this redundant); 0.05-0.10 for a subtle wet/sky lift if you want it back.",
+    "fresnel_exponent": 8,
+    "_fresnel_exponent_comment": "Falloff of the fresnel sky-tint. Higher = effect confined to only the most grazing angles; lower = spreads up the surface. Only matters when fresnel_strength > 0.",
+    "anisotropic_filtering": 8,
+    "_anisotropic_filtering_comment": "Texture anisotropic filtering level (0 = off, 4/8/16). Reduces blurring at steep view angles",
+    "cliff_displacement_strength": 2,
+    "_cliff_displacement_strength_comment": "World-space magnitude of static geometric displacement on cliff-oriented slots (pushes subdivided vertices along outward normal by height map). 0 = flat cliffs, 0.2 = subtle, 0.4 = default, 0.8+ = pronounced. Only affects slots with cliff_oriented: true.",
+    "cliff_displacement_subdivisions": 4,
+    "_cliff_displacement_subdivisions_comment": "Grid subdivision per cliff face (1 = no subdivision/flat). 4 = 4x4 inner grid = 32 triangles per face. Higher = more geometric detail but more vertices.",
+    "plateau_steep_tiles": false,
+    "_plateau_steep_tiles_comment": "When true, steep sloped tiles are converted to flat plateaus at tilemap build time so adjacent tiles at different elevations form real vertical cliff faces. Required for the cliff_oriented rock texture to look correct (otherwise UVs streak on tilted tops). Set false to revert to smooth terrain if cliffs look wrong.",
+    "plateau_slope_threshold": 14,
+    "_plateau_slope_threshold_comment": "Corner elevation diff (in tenths, 10 = 1 cell) above which a tile is flattened into a plateau. 14 = 1.4 cells diff, matches the renderer's steep_rocks threshold. Lower = more stepping (more cliffs), higher = fewer but bigger cliffs.",
+    "steep_top_subdivisions": 4,
+    "_steep_top_subdivisions_comment": "TICKET-028: inner-grid subdivision for steep tile top faces. 1 = legacy 2 triangles per tile. 4 = 4×4 inner grid (32 triangles per steep tile). Only tiles with corner-height delta >= steep_top_threshold pay the cost; flat tiles stay at 2 triangles. Bilinear interpolation of corner heights breaks up coarse silhouettes on slopes (river banks, hills).",
+    "steep_top_threshold": 8,
+    "_steep_top_threshold_comment": "Corner elevation diff (in tenths, 10 = 1 cell) above which a top face is subdivided. 8 = 0.8 cells covers river bank slopes; 14 matches plateau_slope_threshold for full cliff territory.",
+    "grass_variation": {
+      "_comment": "TICKET-064: noise-driven colour tinting of the single grass texture — breaks up the flat single-green carpet with hue shift, darker patches, dry/yellow blotches, and mud/brown blotches WITHOUT authoring extra grass textures. Pure shader tint on the existing grass; only grass-dominant fragments are affected. Three independent thresholded noise fields: lush, dry, mud — applied in that order so mud paints over dry where they overlap. Each has its own *_threshold; wherever a fragment is below ALL THREE thresholds the grass is left UNTOUCHED (base colour). Raise the thresholds for more untouched grass; lower them for more coverage. Set lush_strength + dry_strength + mud_strength to 0 for the old flat look. This block is the GLOBAL default; any level JSON can override it per-level with a top-level \"grass_variation\": { ... } block (same fields) so each map has its own feel.",
+      "tone_scale": 18,
+      "_tone_scale_comment": "World units per period of the tone noise (the broad hue/brightness blotches). Larger = bigger, softer patches; smaller = busier. ~16-24 reads natural at tile scale.",
+      "dry_scale": 60,
+      "_dry_scale_comment": "World units per period of the dry/yellow-patch noise. Separate from tone_scale so dry regions don't line up with the tone blotches.",
+      "dry_threshold": 0.6,
+      "_dry_threshold_comment": "Noise value (0..1) above which the dry/yellow tint begins. Higher = rarer, smaller dry patches; lower = more of the map reads dry.",
+      "dry_softness": 0.18,
+      "_dry_softness_comment": "Width of the smooth ramp from no-dry to full-dry above the threshold. 0 = hard edge between green and dry, 0.3 = wide gradient.",
+      "dry_strength": 0.5,
+      "_dry_strength_comment": "Strength of the dry/yellow tint. 0 disables it.",
+      "dry_tint": [
+        0.89,
+        0.89,
+        0.365
+      ],
+      "_dry_tint_comment": "RGB multiplier applied in the dry patches. Default warm + yellow (red/green up, blue down) for a sun-bleached look.",
+      "lush_strength": 0.55,
+      "_lush_strength_comment": "Strength of the tone tint (hue shift + darker patches). 0 disables it.",
+      "lush_threshold": 0.5,
+      "_lush_threshold_comment": "Noise value (0..1) above which the lush tint begins. 0 = LEGACY continuous behaviour (lush everywhere, no untouched grass). Set > 0 to make lush a thresholded patch like dry/mud — then areas below ALL three thresholds (lush/dry/mud) keep the untouched base grass colour. Raise toward 1 for more untouched grass.",
+      "lush_softness": 0.15,
+      "_lush_softness_comment": "Width of the smooth ramp from no-lush to full-lush above lush_threshold. Only matters when lush_threshold > 0.",
+      "lush_tint": [
+        0.514,
+        0.831,
+        0.431
+      ],
+      "_lush_tint_comment": "RGB multiplier applied in the tone patches. Channels < 1 darken; relative differences shift hue. Default is a slightly darker, richer green.",
+      "mud_scale": 30,
+      "_mud_scale_comment": "World units per period of the mud/brown-patch noise. Own field (decorrelated from tone + dry) so mud doesn't line up with the dry/lush blotches. Larger = bigger patches.",
+      "mud_threshold": 0.62,
+      "_mud_threshold_comment": "Noise value (0..1) above which the mud/brown tint begins. Higher = rarer, smaller mud patches; lower = more of the map reads as mud. NOTE: the noise is centred ~0.5, so values much below 0.5 (e.g. 0.3) cover the MAJORITY of the map — keep ~0.6+ for distinct patches with untouched grass between them.",
+      "mud_softness": 0.15,
+      "_mud_softness_comment": "Width of the smooth ramp from no-mud to full-mud above the threshold. 0 = hard edge, 0.3 = wide gradient.",
+      "mud_strength": 0.7,
+      "_mud_strength_comment": "Strength of the mud/brown tint. 0 disables it.",
+      "mud_tint": [
+        0.549,
+        0.482,
+        0.176
+      ],
+      "_mud_tint_comment": "RGB multiplier applied in the mud patches. Because this is a MULTIPLY on green grass, a convincing brown needs the RED channel highest, green moderate, BLUE lowest (so red ends up dominating green). Lower all three together to also darken the mud."
+    }
+  },
+  "grass": {
+    "diffuse": "assets/terrain/terrain_grass_seamless.webp",
+    "normal": "assets/terrain/terrain_grass_seamless_nrm.webp",
+    "height": "assets/terrain/terrain_grass_seamless_hgt.webp",
+    "uv_scale": 0.5,
+    "normal_flip_y": true
+  },
+  "dirt": {
+    "diffuse": "assets/terrain/terrain_dirt.webp",
+    "normal": "assets/terrain/terrain_dirt_nrm.webp",
+    "height": "assets/terrain/terrain_dirt_hgt.webp",
+    "uv_scale": 2,
+    "normal_flip_y": true,
+    "normal_flip_x": false
+  },
+  "rocks": {
+    "_comment": "Dirt/rocks blend texture — maps to the 'rocks' terrain blend slot",
+    "diffuse": "assets/terrain/terrain_dirt_rocks.webp",
+    "normal": "assets/terrain/terrain_dirt_rocks_nrm.png",
+    "height": "assets/terrain/terrain_dirt_rocks_hgt.webp",
+    "normal_flip_y": true,
+    "uv_scale": 5
+  },
+  "leafy": {
+    "diffuse": "assets/terrain/terrain_leafs.webp",
+    "normal": "assets/terrain/terrain_leafs_nrm.webp",
+    "height": "assets/terrain/terrain_leafs_hgt.webp",
+    "uv_scale": 2
+  },
+  "field": {
+    "diffuse": "assets/terrain/terrain_field.webp",
+    "normal": "assets/terrain/terrain_field_nrm.webp",
+    "height": "assets/terrain/terrain_field_hgt.webp",
+    "normal_flip_y": true,
+    "uv_scale": 1
+  },
+  "steep_rocks": {
+    "_comment": "Pure rocks texture for steep cliff faces. cliff_oriented=true enables biplanar X+Z sampling, 180° UV rotation, and per-axis reoriented normals (for textures authored as vertical cliff faces).",
+    "diffuse": "assets/terrain/terrain_rocks.webp",
+    "normal": "assets/terrain/terrain_rocks_nrm.webp",
+    "height": "assets/terrain/terrain_rocks_hgt.webp",
+    "normal_flip_y": true,
+    "uv_scale": 2,
+    "cliff_oriented": true
+  },
+  "steep_rocks_02": {
+    "_comment": "Second rocks variant, noise-blended with steep_rocks for visual variety",
+    "diffuse": "assets/terrain/terrain_rocks_02.webp"
+  },
+  "road": {
+    "diffuse": "assets/terrain/terrain_road_seamless.webp",
+    "normal": "assets/terrain/terrain_road_seamless_nrm.webp",
+    "height": "assets/terrain/terrain_road_seamless_hgt.webp"
+  },
+  "hedge": {
+    "diffuse": "assets/textures/hedge_diffuse.webp",
+    "normal": "assets/textures/hedge_nrm.webp",
+    "height": "assets/textures/hedge_diffuse_hgt.webp"
+  },
+  "wheat": {
+    "diffuse": "assets/textures/wheat.webp"
+  },
+  "wet_gravel": {
+    "_comment": "River-adjacent bank overlay (TICKET-017 Phase 3c). Rendered as a separate pass on `river_adjacent` tiles, layered between roads and water.",
+    "diffuse": "assets/terrain/terrain_wet_gravel.webp",
+    "normal": "assets/terrain/terrain_wet_gravel_nrm.webp",
+    "height": "assets/terrain/terrain_wet_gravel_hgt.webp",
+    "uv_scale": 1,
+    "_uv_scale_comment": "World-space UV multiplier for the bank-overlay texture. Lower = texture tiles over a larger area (coarser pattern); higher = smaller tighter pattern. 0.3 tiles once every ~3.3 world units.",
+    "normal_flip_y": true
+  },
+  "bog": {
+    "_comment": "Wet bog terrain (TICKET-020 follow-up). Slice 4 of the packed-layer array. Per-fragment weight comes from a_terrain_id_2.x (second vec4 vertex attribute introduced to extend past the original 4-channel limit).",
+    "diffuse": "assets/terrain/terrain_bog.webp",
+    "normal": "assets/terrain/terrain_bog_nrm.webp",
+    "height": "assets/terrain/terrain_bog_hgt.webp",
+    "uv_scale": 2,
+    "normal_flip_y": false,
+    "normal_flip_x": false,
+    "normal_bias": [
+      -0.15,
+      -0.3
+    ],
+    "_normal_bias_comment": "TICKET-106: bog's normal map has a non-zero average tilt (grass tufts all lean toward one side). Simple sign-flips can only rotate the bias by 90/180°; this 2-vector subtracts the authored average from every per-fragment map_n.xy so the mean lands at zero. Sweep these two numbers (raw tangent units, -1..+1 range) until the Blinn-Phong peak fires when the camera looks toward the sun. Per-pixel surface detail is preserved — only the average shifts. Start with both at 0; the highlight peaks on the wrong side, then nudge x/y in 0.05 increments to find the value where the peak aligns with the sun-facing camera azimuth."
+  }
+}

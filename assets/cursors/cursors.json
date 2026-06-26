@@ -1,0 +1,133 @@
+{
+  "_comment": [
+    "TICKET-201 — optional cursor PNG overrides (desktop).",
+    "Override-only: drop a PNG named below into this folder to replace that",
+    "cursor; if the file is absent or fails to load, the game falls back to its",
+    "built-in procedural cursor art. No PNGs ship by default.",
+    "'hotspot' is [x, y] in PIXELS from the PNG's top-left — the point that",
+    "tracks the mouse (arrow tip, crosshair centre, flag-pole top). Match it to",
+    "your PNG's size. The PNG is drawn at its native pixel size.",
+    "Set env CURSOR_PNG=0 to force the procedural cursor regardless of overrides."
+  ],
+  "cursors": {
+    "default": {
+      "file": "cursor_default.webp",
+      "hotspot": [
+        0,
+        0
+      ]
+    },
+    "select": {
+      "file": "cursor_select.webp",
+      "hotspot": [
+        0,
+        0
+      ]
+    },
+    "move": {
+      "file": "cursor_move.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "attack": {
+      "file": "cursor_attack.png",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "attack_move": {
+      "file": "cursor_attack_move.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "mount": {
+      "file": "cursor_mount.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "dismount": {
+      "file": "cursor_dismount.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "build": {
+      "file": "cursor_build.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "invalid": {
+      "file": "cursor_invalid.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "gather": {
+      "file": "cursor_gather.png",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "capture": {
+      "file": "cursor_capture.png",
+      "hotspot": [
+        0,
+        0
+      ]
+    },
+    "worker_farm": {
+      "file": "cursor_worker_farm.png",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "worker_lumber": {
+      "file": "cursor_worker_lumber.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "worker_build": {
+      "file": "cursor_worker_build.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "worker_repair": {
+      "file": "cursor_worker_repair.webp",
+      "hotspot": [
+        16,
+        16
+      ]
+    },
+    "rally": {
+      "file": "cursor_rally.webp",
+      "hotspot": [
+        0,
+        0
+      ]
+    },
+    "patrol": {
+      "file": "cursor_patrol.webp",
+      "hotspot": [
+        0,
+        0
+      ]
+    }
+  }
+}

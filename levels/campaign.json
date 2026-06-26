@@ -1,0 +1,49 @@
+{
+    "version": 1,
+    "nodes": [
+        {
+            "id": "hillside",
+            "level_file": "levels/Level 1 hillside court.json",
+            "display_name": "Hillside Court",
+            "description": "A foothold, capture the farms and survive the horde.",
+            "position": [0.32, 0.85],
+            "image": "assets/campaign/hillside.png",
+            "difficulty": "easy",
+            "rewards": ["+1 Hunter"],
+            "prerequisites": []
+        },
+        {
+            "id": "brailsford",
+            "level_file": "levels/big hillside.json",
+            "display_name": "Brailsford",
+            "description": "A larger sweep of the A52 corridor. More farms, more ground to defend.",
+            "position": [0.65, 0.55],
+            "image": "assets/campaign/brailsford.png",
+            "difficulty": "medium",
+            "rewards": ["+2 Hunters", "Unlocks Watchtower"],
+            "prerequisites": ["hillside"]
+        },
+        {
+            "id": "kirklangley",
+            "level_file": "levels/big hillside.json",
+            "display_name": "Kirk Langley",
+            "description": "A larger sweep of the A52 corridor. More farms, more ground to defend.",
+            "position": [0.15, 0.55],
+            "image": "assets/campaign/brailsford.png",
+            "difficulty": "medium",
+            "rewards": ["+2 Hunters", "Unlocks Watchtower"],
+            "prerequisites": ["hillside"]
+        },
+        {
+            "id": "crossroads",
+            "level_file": "levels/default.json",
+            "display_name": "Crossroads",
+            "description": "A choke point where the highways meet. Hold the junction or lose the region.",
+            "position": [0.40, 0.28],
+            "image": "assets/campaign/crossroads.png",
+            "difficulty": "hard",
+            "rewards": ["+1 Watchtower"],
+            "prerequisites": ["brialsford"]
+        }
+    ]
+}

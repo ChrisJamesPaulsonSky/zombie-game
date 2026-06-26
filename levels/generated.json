@@ -1,0 +1,451 @@
+{
+  "name": "generated_countryside_42",
+  "width": 64,
+  "height": 64,
+  "terrain_grid": [
+    "..............LLLLL.............................L...............",
+    "..............LLLLL.DD.......DDDD.............LLLLL.............",
+    ".............LLLLLLLD........DDDDD............LLLLL.............",
+    "...........L..LLLLL.........DLDDDD...........LLLLLLL............",
+    ".........LLLLLLLLLL........LLLLLDD............LLLLL.............",
+    "..L......LLLLL..L..........LLLLLDD....L.......LLLLL.............",
+    "LLLLL...LLLLLLL...........LLLLLLLDDDLLLLL.......L.......L.......",
+    "LLLLL....LLLLL.............LLLLLDD.DLLLLLD...DDDDD....LLLLL.....",
+    "LLLLLL...LLLLL.............LLLLL...LLLLLLLD.DDDDDD....LLLLL.....",
+    "LLLLL......L.................L...L..LLLLLDDDDDDDDD...LLLLLLL....",
+    "LLLLL..........................LLLLLLLLLLDDDDDDDDD....LLLLL.....",
+    "..L............................LLLLL..L....DDDDDDD....LLLLL.....",
+    "..............................LLLLLLL.......DDDDD.......L..L....",
+    "...............................LLLLL.........DDD.........LLLLL..",
+    ".....DD........................LLLLL.........DD..........LLLLL..",
+    "....DDDD.........................L..........DDD.........LLLLLLL.",
+    "....DDDD...................................DDDD..........LLLLL..",
+    "...DDDDDDDD........KKKK..D.......L........DDDDDD.........LLLLL..",
+    "...DDDDDDDDD......KKKKK..D.....LLLLL......DDDDDDDDDDD......L....",
+    "...DDDDD.DDDD....KKKKKK..D.....LLLLL.......DDDDDDDDDD....LLLLL..",
+    "...DDDDD...D.....KKKK....D....LLLLLLL......DDDDDDDDDD....LLLLL..",
+    "...DDDDDL........KKKK..........LLLLL.......DDDDDDDDDD...LLLLLLL.",
+    "..DD..LLLLLD.....KKK..L........LLLLL.....DDDDDDDDDDD.....LLLLL..",
+    "..DD..LLLLLD........LLLLL........L.......DDDDDDDDD.......LLLLL..",
+    "..L..LLLLLLL........LLLLL................DDDDDDDDD.........L....",
+    "LLLLL.LLLLL........LLLLLLL..............DDDDDDDDD........LLLLL..",
+    "LLLLL.LLLLL.........LLLLL...............DDDDDDDD.........LLLLL..",
+    "LLLLLL..L...........LLLLL...L...........DD..DDD.........LLLLLLL.",
+    "LLLLL.................L...LLLLL.........DD..DDDD.........LLLLL..",
+    "LLLLL.....................LLLLL...........DDDDDD.........LLLLL..",
+    "..L..............D.......LLLLLLL...........DDDDDD.........LL....",
+    "...L.............DD.......LLLLL.............DDDD........LLLLL...",
+    ".LLLLL...........DD.......LLLLLDD.............DD........LLLLL...",
+    ".LLLLL.......L.DDD..........LDDDD..............LDD.....LLLLLLL..",
+    "LLLLLLL....LLLLLDDD........DDDDD.......L.....LLLLL......LLLLL...",
+    ".LLLLL.....LLLLLD.D.......DLDDDD.....LLLLL...LLLLL...L..LLLLL...",
+    ".LLLLL....LLLLLLL........LLLLLD......LLLLL..LLLLLLLLLLLL..L.....",
+    ".DDL...L...LLLLL.........LLLLLD.....LLLLLLL..LLLLL.LLLLL........",
+    "DDDDDLLLLL.LLLLL........LLLLLLLD.....LLLLL...LLLLLLLLLLLL.DDDD..",
+    "DDDDDLLLLL...L...........LLLLLD......LLLLL....DLDD.LLLLLDDDDD...",
+    "DDDDLLLLLLL..............LLLLL.........L.....DDDDD.LLLLLDD......",
+    "DDDD.LLLLL.................L..................DDDD...LDDDD......",
+    ".....LLLLL.....L.................................D....DDDD......",
+    ".......L.....LLLLL...................................DDDDDD.....",
+    ".............LLLLL...................................DDDDDD.....",
+    "............LLLLLLL..................................DDDDDD.....",
+    ".............LLLLL........................L...........DDDDD.....",
+    ".............LLLLL......................LLLLL............D......",
+    "...............L........................LLLLL...................",
+    "...............L.......................LLLLLLL..................",
+    ".............LLLLL......................LLLLL...................",
+    "..........DDDLLLLL......................LLLLL...................",
+    "..........DDLLLLLLL.......................L.....................",
+    "......DDDDDDDLLLLL............................L.........L.......",
+    ".....DDDDDDDDLLLLL..........................LLLLLDD...LLLLL.....",
+    "....DDDDD......L.........L..................LLLLLDDD.DLLLLL.....",
+    "..DDDDDDD..............LLLLL...............LLLLLLLDD.LLLLLLL....",
+    "..DDDDDDD..............LLLLL..........L.....LLLLLDDDDDLLLLL.....",
+    "..DDDDDDDD....L.......LLLLLLL.DD....LLLLL...LLLLLDDDDDLLLLL.....",
+    "..DDDDDDDD..LLLLL......LLLLL........LLLLL...DDLDDDDDDDD.L.......",
+    "...DDDDDDD..LLLLL......LLLLL.......LLLLLLL..DDDDDDDDDDD.........",
+    "...DDD.....LLLLLLL.......L..........LLLLL..DDDDDDDDDDDD.........",
+    "...DD.......LLLLL...................LLLLL...DDDDDDDD............",
+    "...D........LLLLL.....................L......DDDDD.............."
+  ],
+  "hills": [
+    {
+      "cx": 14.341164,
+      "cy": 43.64135,
+      "radius": 5.7566338,
+      "max_height": 1.9204406
+    },
+    {
+      "cx": 49.428047,
+      "cy": 27.361046,
+      "radius": 8.129101,
+      "max_height": 1.4037768
+    },
+    {
+      "cx": 47.177986,
+      "cy": 18.470001,
+      "radius": 11.704622,
+      "max_height": 0.6399342
+    },
+    {
+      "cx": 20.131905,
+      "cy": 19.714592,
+      "radius": 5.9720745,
+      "max_height": 1.6861963
+    }
+  ],
+  "camera": {
+    "x": 32.0,
+    "y": 32.0
+  },
+  "buildings": [],
+  "units": [],
+  "zombies": [],
+  "vehicles": [],
+  "props": [
+    {
+      "key": "prop_bush",
+      "x": 45.0,
+      "y": 12.0,
+      "rotation": 6.23651
+    },
+    {
+      "key": "prop_bush",
+      "x": 8.0,
+      "y": 13.0,
+      "rotation": 2.7900624
+    },
+    {
+      "key": "prop_bush",
+      "x": 21.0,
+      "y": 6.0,
+      "rotation": 2.3308158
+    },
+    {
+      "key": "prop_bush",
+      "x": 25.0,
+      "y": 13.0,
+      "rotation": 5.2764673
+    },
+    {
+      "key": "prop_bush",
+      "x": 47.0,
+      "y": 42.0,
+      "rotation": 4.37688
+    },
+    {
+      "key": "prop_bush",
+      "x": 32.0,
+      "y": 53.0,
+      "rotation": 0.627324
+    },
+    {
+      "key": "prop_bush",
+      "x": 14.0,
+      "y": 15.0,
+      "rotation": 0.28619903
+    },
+    {
+      "key": "prop_bush",
+      "x": 4.0,
+      "y": 46.0,
+      "rotation": 2.6661792
+    },
+    {
+      "key": "prop_bush",
+      "x": 5.0,
+      "y": 54.0,
+      "rotation": 0.18499224
+    },
+    {
+      "key": "prop_bush",
+      "x": 47.0,
+      "y": 19.0,
+      "rotation": 5.2282143
+    },
+    {
+      "key": "prop_bush",
+      "x": 58.0,
+      "y": 44.0,
+      "rotation": 5.446247
+    },
+    {
+      "key": "prop_bush",
+      "x": 24.0,
+      "y": 51.0,
+      "rotation": 3.66805
+    },
+    {
+      "key": "prop_tree_dead",
+      "x": 59.0,
+      "y": 15.0,
+      "rotation": 0.27070343
+    },
+    {
+      "key": "prop_tree_dead",
+      "x": 14.0,
+      "y": 61.0,
+      "rotation": 0.86502886
+    },
+    {
+      "key": "prop_tree_dead",
+      "x": 42.0,
+      "y": 49.0,
+      "rotation": 5.2735543
+    },
+    {
+      "key": "prop_tree_dead",
+      "x": 13.0,
+      "y": 36.0,
+      "rotation": 0.14613265
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 33.0,
+      "y": 12.0,
+      "rotation": 4.8876734
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 22.0,
+      "y": 25.0,
+      "rotation": 1.4583791
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 27.0,
+      "y": 38.0,
+      "rotation": 5.3317256
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 58.0,
+      "y": 33.0,
+      "rotation": 6.2624955
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 2.0,
+      "y": 8.0,
+      "rotation": 4.5022492
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 38.0,
+      "y": 8.0,
+      "rotation": 3.1901977
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 28.0,
+      "y": 30.0,
+      "rotation": 1.944651
+    },
+    {
+      "key": "prop_tree_oak_03",
+      "x": 56.0,
+      "y": 56.0,
+      "rotation": 5.971508
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 59.0,
+      "y": 21.0,
+      "rotation": 1.4776647
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 2.0,
+      "y": 27.0,
+      "rotation": 0.8475611
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 46.0,
+      "y": 56.0,
+      "rotation": 5.587788
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 15.0,
+      "y": 45.0,
+      "rotation": 2.6752746
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 53.0,
+      "y": 38.0,
+      "rotation": 2.5186796
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 33.0,
+      "y": 20.0,
+      "rotation": 6.075267
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 48.0,
+      "y": 3.0,
+      "rotation": 0.87598246
+    },
+    {
+      "key": "prop_tree_oak_02",
+      "x": 39.0,
+      "y": 37.0,
+      "rotation": 3.2549882
+    },
+    {
+      "key": "prop_rocks",
+      "x": 19.0,
+      "y": 19.0,
+      "rotation": 2.4619763,
+      "scale": 1.4787074
+    },
+    {
+      "key": "prop_rocks",
+      "x": 20.56104,
+      "y": 18.036093,
+      "rotation": 3.843033,
+      "scale": 0.67971146
+    },
+    {
+      "key": "prop_rocks",
+      "x": 18.186989,
+      "y": 20.69557,
+      "rotation": 1.0278533,
+      "scale": 0.7335417
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 11.0,
+      "y": 6.0,
+      "rotation": 3.2247694
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 29.0,
+      "y": 6.0,
+      "rotation": 1.4711603
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 15.0,
+      "y": 52.0,
+      "rotation": 2.0649915
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 16.0,
+      "y": 2.0,
+      "rotation": 4.0600915
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 47.0,
+      "y": 36.0,
+      "rotation": 5.077491
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 56.0,
+      "y": 9.0,
+      "rotation": 1.7894238
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 38.0,
+      "y": 60.0,
+      "rotation": 2.7201548
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 7.0,
+      "y": 40.0,
+      "rotation": 5.549064
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 8.0,
+      "y": 24.0,
+      "rotation": 5.954355
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 25.0,
+      "y": 58.0,
+      "rotation": 5.6316857
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 59.0,
+      "y": 27.0,
+      "rotation": 1.8158078
+    },
+    {
+      "key": "prop_tree_oak_01",
+      "x": 3.0,
+      "y": 34.0,
+      "rotation": 2.0469754
+    }
+  ],
+  "roads": [],
+  "hedges": [],
+  "rivers": [
+    {
+      "waypoints": [
+        [
+          2.0,
+          35.880527
+        ],
+        [
+          8.666666,
+          43.06079
+        ],
+        [
+          15.333333,
+          34.535122
+        ],
+        [
+          22.0,
+          29.875187
+        ],
+        [
+          28.666666,
+          39.95746
+        ],
+        [
+          35.333336,
+          41.062508
+        ],
+        [
+          42.0,
+          30.3184
+        ],
+        [
+          48.666668,
+          34.92077
+        ],
+        [
+          55.333332,
+          44.054096
+        ],
+        [
+          62.0,
+          37.23271
+        ]
+      ],
+      "half_width": 0.1,
+      "depth": 2,
+      "bank_slope": 1.25,
+      "scroll_speed": 1.5,
+      "foam_intensity": 2.0,
+      "foam_band_width": 0.25,
+      "bank_margin": 0.2,
+      "bank_strength": 0.75,
+      "shallow_color": [0.294, 0.549, 0.29, 0.75],
+      "deep_color":    [0.137, 0.259, 0.137, 0.95]
+    }
+  ],
+  "spawn_zones": []
+}
